@@ -1,14 +1,48 @@
 .container-product{
     width: 30%;
-    padding: 4px;
     border: 1px solid #8d8d8d;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    position: relative;
 }
 .container-product:hover{
     border: 2px solid red;
 }
 .container-product img{
     width: 100%;
+}
+.container-product .stars{
+    display: flex;
+    gap: 4px;
+}
+.container-product .stars img{
+    width: 20px;
+}
+.container-product .content-btn{
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+}
+.container-product:hover .content-btn{
+    display: flex;
+}
+.container-product:hover .btn-product{
+    display: block;
+}
+.container-product .btn-product{
+    width: 190px;
+    display: none;
+    min-width: 164px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
 }
