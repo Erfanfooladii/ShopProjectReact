@@ -5,11 +5,3 @@
   font-family: sans-serif;
 }
 
-.container-main{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 6px;
-}
