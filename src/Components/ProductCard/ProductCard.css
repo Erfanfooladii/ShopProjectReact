@@ -9,6 +9,34 @@
 .container-product:hover{
     border: 2px solid red;
 }
+
+
+.container-product .body-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+}
+.container-product .body-product .category{
+    font-weight: 100;
+    color: #8d8d8d;
+    font-size: large;
+}
+.container-product .body-product .name{
+    font-size: larger;
+}
+.container-product .body-product .price{
+    color: red;
+    font-size: x-large;
+}
+.container-product .body-product .price small{
+    color: #8d8d8d;
+    text-decoration: line-through;
+}
+
+
 .container-product img{
     width: 100%;
 }
@@ -19,6 +47,7 @@
 .container-product .stars img{
     width: 20px;
 }
+
 .container-product .content-btn{
     display: none;
     position: absolute;
@@ -26,12 +55,13 @@
     z-index: 1;
     display: flex;
     width: 100%;
-    padding: 5px;
     align-content: center;
     justify-content: center;
 }
 .container-product:hover .content-btn{
     display: flex;
+    bottom: -57px;
+    padding: 5px;
 }
 .container-product:hover .btn-product{
     display: block;
@@ -45,4 +75,10 @@
     border: none;
     padding: 15px;
     border-radius: 25px;
+    cursor: pointer;
+    transition: 400ms;
+}
+.container-product .btn-product:hover{
+    transition: 400ms;
+    background-color: rgb(236, 73, 73);
 }
