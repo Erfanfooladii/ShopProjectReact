@@ -1,8 +1,4 @@
-.container-product-list{
-    align-items: center;
-    justify-content: center;
+.container-product-main{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 6px;
+    justify-content: center;
 }
