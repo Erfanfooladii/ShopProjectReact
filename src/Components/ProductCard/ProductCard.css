@@ -37,16 +37,6 @@
 }
 
 
-.container-product img{
-    width: 100%;
-}
-.container-product .stars{
-    display: flex;
-    gap: 4px;
-}
-.container-product .stars img{
-    width: 20px;
-}
 
 .container-product .content-btn{
     display: none;
