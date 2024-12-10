@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import { fetchProducts } from "../../utils/fetchProducts";
 const Category = () => {
     const categories = [
-        { name: 'laptops', id: 1 },
-        { name: 'smartphones', id: 2 },
-        { name: 'cameras', id: 3 },
-        { name: 'accessories', id: 4 }
+        { name: 'Electronics', id: 1 },
+        { name: 'Home & Garden', id: 2 },
+        { name: 'Sports', id: 3 },
+        { name: 'Books', id: 4 },
+        {name: 'Clothing', id:5}
     ];
 
     const [selectedCategories, setSelectedCategories] = useState(new Set());
@@ -24,23 +25,8 @@ const Category = () => {
         });
     };
 
-    //console.log([...selectedCategories]);
-    useEffect(() => {
-    const getApi = async () => {
-        try {
-            const data = await fetchProducts();
-            if (data && data.category && data.category.name) {
-                const categoryType = data.category.name;
-                console.log(categoryType);
-            } else {
-                console.error('Unexpected data structure:', data);
-            }
-        } catch (error) {
-            console.error('Error fetching products:', error);
-        }
-    };
-    getApi();
-}, []);
+    console.log([...selectedCategories]);
+    
     return (
         <div className="container-category">
             <h2>CATEGORIES</h2>
