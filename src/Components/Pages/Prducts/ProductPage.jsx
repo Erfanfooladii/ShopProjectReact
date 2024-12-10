@@ -1,13 +1,13 @@
 import { fetchProducts } from "../../../utils/fetchProducts"
-import ProductCard from "../../ProductCard/ProductCard"
 import { useState,useEffect } from "react"
 import "./ProductPage.css"
+import ProductList from "../../product-list/ProductList"
+import Category from "../../Category/Category"
 const ProductPage=()=>{
 
     const [data,setData]=useState([])
     const [isLoading,setIsLoading]=useState(undefined)
     const [error,setError]=useState(undefined)
-    
 
     useEffect(() => {
         const getApi=async ()=>{
@@ -22,28 +22,19 @@ const ProductPage=()=>{
             }
         }
         getApi()
-        document.title= "Procut page"
+        document.title= "Procuts page"
     }, []);
     if (isLoading) {
         return <div>Loading data...</div>
     }
     if (error) {
         return <div>Error: {error}</div>
-    }
+    }    
     return(
-        <div className='container-product-list' >
-        {
-          data.map((item)=>{
-            return <ProductCard 
-              key={item.id}
-              productName={item.name}
-              productPrice={Math.round(item.price)}
-              productImage={item.images[0]}
-              category={item.category.name}
-            />
-          })
-        }
-      </div>
+        <div className="container-product-main">
+            <Category/>
+            <ProductList data={data}/>
+        </div>
     )
 }
 export default ProductPage
