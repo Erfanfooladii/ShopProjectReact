@@ -1,6 +1,6 @@
 .container-product{
     width: 30%;
-    border: 1px solid #8d8d8d;
+    border: 2px solid #eeeeee;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -71,4 +71,16 @@
 .container-product .btn-product:hover{
     transition: 400ms;
     background-color: rgb(236, 73, 73);
+}
+
+
+.footer-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.footer-btns button{
+    background-color: transparent;
+    border: none;
 }
