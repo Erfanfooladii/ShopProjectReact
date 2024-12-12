@@ -42,7 +42,9 @@ const ProductPage=()=>{
         <div className="container-product-main">
             <Category/>
             {
-                <ProductList data={ex}/> && <ProductList data={data}/>
+                ex.length > 0 ?
+                <ProductList data={ex}/> :
+                <ProductList data={data}/>
             }
         </div>
     )
