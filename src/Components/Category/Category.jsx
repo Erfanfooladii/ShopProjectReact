@@ -1,7 +1,7 @@
 import "./Category.css";
 import InputCheckbox from "../Inputs/inputCheckboxs/InputCheckbox";
-import { useEffect, useState } from "react";
-import { fetchProducts } from "../../utils/fetchProducts";
+import { useContext, useEffect, useState } from "react";
+import { CategoryContext } from "../../contexts/categoryContext";
 const Category = () => {
     const categories = [
         { name: 'Electronics', id: 1 },
@@ -10,11 +10,10 @@ const Category = () => {
         { name: 'Books', id: 4 },
         {name: 'Clothing', id:5}
     ];
-
-    const [selectedCategories, setSelectedCategories] = useState(new Set());
-
+    
+    const {selectValue,setSelectValue}=useContext(CategoryContext)
     const handleCheckboxChange = (name) => {
-        setSelectedCategories((prev) => {
+        setSelectValue((prev) => {
             const updated = new Set(prev);
             if (updated.has(name)) {
                 updated.delete(name);
@@ -25,15 +24,16 @@ const Category = () => {
         });
     };
 
-    console.log([...selectedCategories]);
     
+
+
     return (
         <div className="container-category">
             <h2>CATEGORIES</h2>
             {
                 categories.map((item) => (
                     <InputCheckbox
-                        checked={selectedCategories.has(item.name)}
+                        checked={selectValue.has(item.name)}
                         isChecked={() => handleCheckboxChange(item.name)}
                         key={item.id}
                         name={item.name}
