@@ -10,6 +10,9 @@ const ProductPage=()=>{
     const [isLoading,setIsLoading]=useState(undefined)
     const [error,setError]=useState(undefined)
     const {selectValue}=useContext(CategoryContext)
+
+    const [filterData,setFilterData]=useState([])
+
     useEffect(() => {
         const getApi=async ()=>{
             setIsLoading(true)
@@ -25,11 +28,13 @@ const ProductPage=()=>{
         getApi()
         document.title= "Procuts page"
     }, []);
-    console.log("seldkfs: ",[...selectValue]);
     const ex=data.filter((item)=>{
-        return item.category.name == [...selectValue]
+        return [...selectValue].includes(item.category.name)
     })
-    console.log('ee',ex);
+    console.log("seve context: ",[...selectValue]);
+
+    console.log('ex: ',ex);
+    console.log(filterData);
     
     
     if (isLoading) {
