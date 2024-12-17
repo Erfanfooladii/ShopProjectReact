@@ -1,14 +1,13 @@
-export const fetchProducts = async () => {
+// https://kaaryar-ecom.liara.run/v1/products?search=book&category=6748dfa3c9017c78628d4a90&page=1&limit=10
+export const fetchProductApi = async ({ search = '', category = [], page = 1, limit = 10 } = {}) => {
+    const baseURL = 'https://kaaryar-ecom.liara.run/v1/products';
     try {
-      const response = await fetch('https://kaaryar-ecom.liara.run/v1/products');
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      return data.products;
+      const res = await fetch(`${baseURL}?search=${search}&category=${category}&page=${page}&limit=${limit}`);
+      const data = await res.json();
+      return data.products || [];
     } catch (error) {
-      console.error('Error fetching products:', error);
-      throw error;
+      console.error('Error fetching data:', error);
+      return [];
     }
-};
+  };
   

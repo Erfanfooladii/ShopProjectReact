@@ -1,42 +1,34 @@
-import { fetchProducts } from "../../../utils/fetchProducts"
 import { useState,useEffect, useContext } from "react"
 import "./ProductPage.css"
 import ProductList from "../../product-list/ProductList"
 import Category from "../../Category/Category"
 import { CategoryContext } from "../../../contexts/categoryContext"
+import Pagination from "../../Pagination/Pagination"
+import { fetchProductApi } from "../../../utils/fetchProducts"
 const ProductPage=()=>{
 
     const [data,setData]=useState([])
     const [isLoading,setIsLoading]=useState(undefined)
     const [error,setError]=useState(undefined)
-    const {selectValue}=useContext(CategoryContext)
-
-    const [filterData,setFilterData]=useState([])
-
-    useEffect(() => {
-        const getApi=async ()=>{
-            setIsLoading(true)
-            try {
-                const data=await fetchProducts()
-                setData(data)
-            } catch (error) {
-                setError(error.message)
-            } finally{
-                setIsLoading(false)
+    const {selectValueCategory}=useContext(CategoryContext)
+        
+        useEffect(() => {
+            const getApi=async ()=>{
+                setIsLoading(true)
+                try {
+                    const data=await fetchProductApi({category:[...selectValueCategory]})
+                    setData(data)
+                } catch (error) {
+                    setError(error.message)
+                } finally{
+                    setIsLoading(false)
+                }
             }
-        }
-        getApi()
-        document.title= "Procuts page"
-    }, []);
-    const ex=data.filter((item)=>{
-        return [...selectValue].includes(item.category.name)
-    })
-    console.log("seve context: ",[...selectValue]);
-
-    console.log('ex: ',ex);
-    console.log(filterData);
-    
-    
+            getApi()
+            document.title= "Procuts page"
+        }, [selectValueCategory]);
+        console.log([...selectValueCategory]);
+        
     if (isLoading) {
         return <div>Loading data...</div>
     }
@@ -45,12 +37,13 @@ const ProductPage=()=>{
     }    
     return(
         <div className="container-product-main">
-            <Category/>
-            {
-                ex.length > 0 ?
-                <ProductList data={ex}/> :
+            <div className="body-product">
+                <Category/>
                 <ProductList data={data}/>
-            }
+            </div>
+            <div className="footer-product">
+                <Pagination/>
+            </div>
         </div>
     )
 }
