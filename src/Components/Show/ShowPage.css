@@ -1,0 +1,16 @@
+.container-showPage{
+    display: flex;
+    gap: 5px;
+}
+.body-showPage{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+}
+.body-showPage select{
+    height: 100%;
+    border: none;
+}
+.body-showPage select:focus{outline: none;}
