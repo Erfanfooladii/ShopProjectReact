@@ -3,9 +3,9 @@ import { createContext, useState } from "react";
 export const CategoryContext=createContext()
 
 export const CategoryProvider=({children})=>{
-    const [selectValue,setSelectValue]=useState(new Set())
+    const [selectValueCategory,setSelectValueCategory]=useState(new Set())
     return (
-        <CategoryContext.Provider value={{selectValue,setSelectValue}}>
+        <CategoryContext.Provider value={{selectValueCategory,setSelectValueCategory}}>
             {children}
         </CategoryContext.Provider>
     )
