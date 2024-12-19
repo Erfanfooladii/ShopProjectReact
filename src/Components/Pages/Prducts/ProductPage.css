@@ -1,4 +1,13 @@
 .container-product-main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+.body-product{
+    display: flex;
+}
+.footer-product{
+    display: flex;
+    justify-content: center;
 }

@@ -1,0 +1,21 @@
+.container-pagination{
+    display: flex;
+    gap: 10px;
+}
+.container-pagination button{
+    padding: 10px;
+    cursor: pointer;
+    color: #000;
+    border: none;
+    font-size: x-large;
+}
+.container-pagination button:hover{
+    background-color: #b8b8b8;
+}
+.container-pagination button.active{
+    background-color: red;
+    color: #fff;
+}
+.container-pagination button.active:hover{
+    background-color: #f54e4e;
+}
