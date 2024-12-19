@@ -10,4 +10,3 @@ export const fetchProductApi = async ({ search = '', category = [], page = 1, li
       return [];
     }
   };
-  
