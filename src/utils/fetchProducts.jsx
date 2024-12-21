@@ -4,7 +4,10 @@ export const fetchProductApi = async ({ search = '', category = [], page = 1, li
     try {
       const res = await fetch(`${baseURL}?search=${search}&category=${category}&page=${page}&limit=${limit}`);
       const data = await res.json();
-      return data.products || [];
+      return {
+        productsData:data.products || [],
+        data:data
+      };
     } catch (error) {
       console.error('Error fetching data:', error);
       return [];

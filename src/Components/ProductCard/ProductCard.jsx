@@ -10,7 +10,7 @@ const ProductCard = ({ productImage, category, productName, productPrice }) => {
                 <h1 className="category">{category}</h1>
                 <h2 className="name">{productName}</h2>
                 <span className="price">${productPrice} <small>$99</small></span>
-                <Stars value={3}/>
+                <Stars value={1}/>
             </div>
             <div className="content-btn">
                 <button className="btn-product">
