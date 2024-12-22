@@ -1,10 +1,10 @@
 import "./ProductPage.css"
-import ProductList from "../../product-list/ProductList"
-import Category from "../../Category/Category"
-import Pagination from "../../Pagination/Pagination"
-import ShowPage from "../../Show/ShowPage"
+import ProductList from "../../Components/product-list/ProductList"
+import Category from "../../Components/Category/Category"
+import Pagination from "../../Components/Pagination/Pagination"
+import ShowPage from "../../Components/Show/ShowPage"
 import { useContext } from "react"
-import { GetApiContext } from "../../../contexts/getApiContext"
+import { GetApiContext } from "../../contexts/getApiContext"
 const ProductPage=()=>{
     const {dataApi}=useContext(GetApiContext)
     return(
