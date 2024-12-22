@@ -3,9 +3,11 @@ import "./Pagination.css";
 import { PaginationContext } from "../../contexts/paginationContext";
 
 const Pagination = ({ totalPages }) => {
-    const { setSelectPagination, selectPagination } = useContext(PaginationContext);
-    const handeleChangePage=()=>{
+    const { selectPagination , setSelectPagination} = useContext(PaginationContext);
 
+
+    const handeleChangePage=(index)=>{
+     setSelectPagination(index + 1)
     }
   return (
     <div className="container-pagination">
@@ -14,7 +16,7 @@ const Pagination = ({ totalPages }) => {
           <button
             key={index}
             className={`${selectPagination === index+1 ? 'active' : ''}`}
-            onClick={handeleChangePage}
+            onClick={ () => handeleChangePage(index)}
           >
             {index + 1}
           </button>
