@@ -8,7 +8,7 @@ import { GetApiContext } from "../../contexts/getApiContext"
 const ProductPage=()=>{
     const {dataApi}=useContext(GetApiContext)
     return(
-        <div className="container-product-main">
+        <div className="global-container container-product-main">
             <div className="body-product">
                 <Category/>
                 <div className="body-product-list">
