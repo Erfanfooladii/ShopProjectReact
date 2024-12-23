@@ -11,7 +11,7 @@ const ProductPage=()=>{
         <div className="container-product-main">
             <div className="body-product">
                 <Category/>
-                <div className="">
+                <div className="body-product-list">
                     <ShowPage/>
                     <ProductList/>
                 </div>

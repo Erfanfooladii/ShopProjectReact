@@ -1,0 +1,48 @@
+.header-container{
+    width: 100%;
+    color: #fff;
+}
+.header-head {
+    background-color: #020231;
+}
+.header-head .global-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.header-head ul{
+    display: flex;
+    align-content: center;
+    list-style: none;
+    gap: 5px;
+}
+.header-head ul li{
+    display: flex;
+    align-items: center;
+}
+
+.header-container .btns-profile{
+    display: flex;
+    gap: 4px;
+}
+.header-container .btns-profile button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+/* start header body */
+.header-body{
+    background-color: #020216;
+    padding: 30px 0;
+}
+.header-body .global-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-body{
+    
+}

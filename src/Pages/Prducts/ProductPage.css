@@ -7,6 +7,12 @@
 .body-product{
     display: flex;
 }
+.body-product-list{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 10px;
+}
 .footer-product{
     display: flex;
     justify-content: center;
