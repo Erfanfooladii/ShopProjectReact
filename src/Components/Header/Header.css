@@ -1,6 +1,7 @@
 .header-container{
     width: 100%;
     color: #fff;
+    border-bottom: 3px solid red;
 }
 .header-head {
     background-color: #020231;
@@ -43,6 +44,52 @@
     justify-content: space-between;
     align-items: center;
 }
-.header-body{
-    
+.header-body .name-shop{
+    font-size: x-large;
+}
+
+.header-body .search-box{
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+}
+.header-body .search-box select{
+    border: none;
+    padding: 0 18px;
+    border-radius: 20px 0 0 20px;
+}
+.header-body .search-box input{
+    border: none;
+    padding: 8px 5px;
+    font-size: larger;
+    min-width: 320px;
+}
+.header-body .search-box input:focus{
+    outline: none;
+}
+.header-body .search-box button{
+    border: none;
+    padding: 0 18px;
+    font-size: small;
+    background-color: red;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+.header-body .search-box button:hover{
+    background-color: rgb(248, 104, 104);
+}
+
+.header-body .route-btn{
+    display: flex;
+    gap: 5px;
+}
+.header-body .route-btn button{
+    color: #fff;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
 }

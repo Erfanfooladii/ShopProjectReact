@@ -36,7 +36,6 @@ const Header=()=>{
                             <h1>Electro</h1>
                         </div>
                         <div className="search-box">
-                            <div className="container-search-box">
                                 <select>
                                     <option value="">All categorys</option>
                                     <option value=""></option>
@@ -44,7 +43,6 @@ const Header=()=>{
                                 </select>
                                 <input type="text" />
                                 <button>Search</button>
-                            </div>
                         </div>
                         <div className="route-btn">
                             <button className="cart-btn">
