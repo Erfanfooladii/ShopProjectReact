@@ -9,7 +9,7 @@ import { GetApiContext } from "../../contexts/getApiContext";
 
 const ProdcutList = () => {
     const [data,setData]=useState([])
-    const [isLoading,setIsLoading]=useState(undefined)
+    const [isLoading,setIsLoading]=useState(false)
     const [error,setError]=useState(undefined)
     const {selectValueCategory}=useContext(CategoryContext)
     const {selectLimitShowPage}=useContext(ShowPageContext)
