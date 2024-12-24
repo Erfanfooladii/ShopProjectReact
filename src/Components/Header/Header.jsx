@@ -37,9 +37,9 @@ const Header=()=>{
                         </div>
                         <div className="search-box">
                                 <select>
-                                    <option value="">All categorys</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                    <option value="All">All categorys</option>
+                                    <option value="Books">Books</option>
+                                    <option value="Sports">Sports</option>
                                 </select>
                                 <input type="text" />
                                 <button>Search</button>
