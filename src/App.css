@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-.global-container{
+.__global-container{
   width: calc(100% - 200px);
   margin: auto;
 }
