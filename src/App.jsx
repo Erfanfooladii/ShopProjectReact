@@ -1,10 +1,10 @@
 import './App.css'
-import Header from './Components/Header/Header'
 import { CategoryProvider } from './contexts/categoryContext'
 import { GetApiProvider } from './contexts/getApiContext'
 import { PaginationProvider } from './contexts/paginationContext'
 import { ShowPageProvider } from './contexts/showPageContext'
-import ProductPage from './Pages/Prducts/ProductPage'
+import Header from './Layouts/Header'
+import ProductPage from './Pages/Home'
 
 function App() {
   return (

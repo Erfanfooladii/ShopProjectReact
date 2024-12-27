@@ -1,0 +1,108 @@
+.header {
+    width: 100%;
+    color: #fff;
+    border-bottom: 3px solid red;
+}
+
+.header__head {
+    background-color: #020231;
+}
+
+.header__head .__global-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.header__head .header__contact-list {
+    display: flex;
+    align-content: center;
+    list-style: none;
+    gap: 5px;
+}
+
+.header__head .header__contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.header__btns-profile {
+    display: flex;
+    gap: 4px;
+}
+
+.header__btns-profile .header__btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+/* Start header body */
+.header__body {
+    background-color: #020216;
+    padding: 30px 0;
+}
+
+.header__body .__global-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__body .header__shop-name {
+    font-size: x-large;
+}
+
+.header__body .header__search-box {
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+}
+
+.header__body .header__search-box .header__search-select {
+    border: none;
+    padding: 0 18px;
+    border-radius: 20px 0 0 20px;
+}
+
+.header__body .header__search-box .header__search-input {
+    border: none;
+    padding: 8px 5px;
+    font-size: larger;
+    min-width: 320px;
+}
+
+.header__body .header__search-box .header__search-input:focus {
+    outline: none;
+}
+
+.header__body .header__search-box .header__search-button {
+    border: none;
+    padding: 0 18px;
+    font-size: small;
+    background-color: red;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.header__body .header__search-box .header__search-button:hover {
+    background-color: rgb(248, 104, 104);
+}
+
+.header__body .header__route-btn {
+    display: flex;
+    gap: 5px;
+}
+
+.header__body .header__route-btn .header__btn {
+    color: #fff;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
