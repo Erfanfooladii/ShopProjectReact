@@ -1,19 +1,22 @@
-.container-product-main{
+.home{
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 60px;
 }
-.body-product{
+.home__body{
     display: flex;
 }
-.body-product-list{
+.home__body--list{
     display: flex;
     gap: 10px;
     flex-direction: column;
     padding: 10px;
 }
-.footer-product{
+/* .home__body--right{
+
+} */
+.home__footer{
     display: flex;
     justify-content: center;
 }

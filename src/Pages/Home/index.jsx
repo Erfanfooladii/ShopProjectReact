@@ -9,18 +9,18 @@ import Category from "../../Components/Category"
 const ProductPage=()=>{
     const {dataApi}=useContext(GetApiContext)
     return(
-        <div className="global-container container-product-main">
-            <div className="body-product">
-                <div className="right-product">
+        <div className="home __global-container">
+            <div className="home__body">
+                <div className="home__body--right">
                     <Category/>
                     <TopSelling />
                 </div>
-                <div className="body-product-list">
+                <div className="home__body--list">
                     <ShowPage/>
                     <ProductList/>
                 </div>
             </div>
-            <div className="footer-product">
+            <div className="home__footer">
                 <Pagination totalPages={dataApi.data?.pagination.totalPages} />
             </div>
         </div>
