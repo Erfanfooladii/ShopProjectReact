@@ -16,8 +16,6 @@ const TopSelling=()=>{
         }
         getData()
     },[])
-    console.log('dste:',data);
-    
     return(
         <div className="selling">
             <h2 className="selling-title">Top Selling</h2>

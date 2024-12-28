@@ -1,4 +1,4 @@
-.container-product{
+.card{
     width: 30%;
     border: 2px solid #eeeeee;
     display: flex;
@@ -6,12 +6,12 @@
     gap: 5px;
     position: relative;
 }
-.container-product:hover{
+.card:hover{
     border: 2px solid red;
 }
 
 
-.container-product .body-product{
+.card__body{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,26 +19,26 @@
     padding: 10px 0;
     gap: 5px;
 }
-.container-product .body-product .category{
+.card__body__category{
     font-weight: 100;
     color: #8d8d8d;
     font-size: large;
 }
-.container-product .body-product .name{
+.card__body__name{
     font-size: larger;
 }
-.container-product .body-product .price{
+.card__body__price{
     color: red;
     font-size: x-large;
 }
-.container-product .body-product .price small{
+.card__body__price--off{
     color: #8d8d8d;
     text-decoration: line-through;
 }
 
 
 
-.container-product .content-btn{
+.card__button--container{
     display: none;
     position: absolute;
     background-color: black;
@@ -48,15 +48,15 @@
     align-content: center;
     justify-content: center;
 }
-.container-product:hover .content-btn{
+.card:hover .card__button--container{
     display: flex;
     bottom: -57px;
     padding: 5px;
 }
-.container-product:hover .btn-product{
+.card:hover .card__button--add{
     display: block;
 }
-.container-product .btn-product{
+.card__button--add{
     width: 190px;
     display: none;
     min-width: 164px;
@@ -68,19 +68,19 @@
     cursor: pointer;
     transition: 400ms;
 }
-.container-product .btn-product:hover{
+.card__button--add:hover{
     transition: 400ms;
     background-color: rgb(236, 73, 73);
 }
 
 
-.footer-btns{
+.card__footer{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
-.footer-btns button{
+.card__footer--button{
     background-color: transparent;
     border: none;
 }

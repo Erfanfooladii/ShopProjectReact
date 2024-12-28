@@ -1,8 +1,8 @@
 import "./InputCheckbox.css"
-const InputCheckbox=({name,isChecked,checked})=>{
+const InputCheckbox=({name,isChecked,checked,disabled})=>{
     return(
         <div className="item-check">
-            <input type="checkbox" checked={checked} onChange={isChecked} id={name} />
+            <input type="checkbox" disabled={disabled} checked={checked} onChange={isChecked} id={name} />
             <label htmlFor={name}>{name}</label>
         </div>
     )

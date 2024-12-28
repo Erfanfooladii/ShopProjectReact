@@ -1,5 +1,5 @@
 import "./ProductList.css"
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../ProductCard";
 import { CategoryContext } from "../../contexts/categoryContext";
 import { useContext, useEffect, useState } from "react";
 import { fetchProductApi } from "../../utils/fetchProducts";
@@ -41,7 +41,7 @@ const ProdcutList = () => {
         return <div>Error: {error} </div>
     }
     return (
-        <div className='container-product-list' >
+        <div className='products' >
             {
                 data.map((item,index)=>{
                     return <ProductCard 
