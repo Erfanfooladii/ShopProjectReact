@@ -1,39 +1,12 @@
-.container-top-selling{
+.selling{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.container-top-selling ul{
+/* .selling-title{} */
+.selling-list{
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-.container-top-selling .item-sellin{
-    width: 100%;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-.item-sellin img{
-    width: 30%;
-}
-.item-sellin .box-detail{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-.item-sellin .box-detail h3{
-    font-size: 13px;
-}
-.item-sellin .box-detail h2{
-    font-size: small;
-    color: #afafaf;
-}
-.item-sellin .box-detail .sellin-price{
-    color: red;
-}
-.box-detail .sellin-price small{
-    color: #afafaf;
-    text-decoration: line-through;
 }

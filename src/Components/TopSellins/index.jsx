@@ -1,3 +1,4 @@
+import ItemSllin from "./ItemSellin";
 import "./TopSelling.css"
 import { useEffect, useState } from "react";
 
@@ -18,22 +19,18 @@ const TopSelling=()=>{
     console.log('dste:',data);
     
     return(
-        <div className="container-top-selling">
-            <h2>Top Selling</h2>
-            <ul>
+        <div className="selling">
+            <h2 className="selling-title">Top Selling</h2>
+            <ul className="selling-list">
                 {
-                    data.map((item)=>(
-                        <li className="item-sellin">
-                            <img src={item.images[0]} alt={item.name} />
-                            <div className="box-detail">
-                                <h2>{item.category.name}</h2>
-                                <h3>{item.name}</h3>
-                                <span className="sellin-price">
-                                    ${Math.round(item.price)}
-                                    <small>$99</small>
-                                </span>
-                            </div>
-                        </li>
+                    data.map((item,index)=>(
+                        <ItemSllin 
+                            key={index}
+                            image={item.images[0]}
+                            name={item.name}
+                            category={item.category.name}
+                            price={item.price}
+                        />
                     ))
                 }
             </ul>
