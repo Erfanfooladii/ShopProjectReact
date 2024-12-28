@@ -37,7 +37,7 @@ const Category = () => {
     
     const isAnyChecked=checked.size > 0
     return (
-        <div className="container-category">
+        <div className="category">
             <h2>CATEGORIES</h2>
             {
                 categories.map((item) => (
