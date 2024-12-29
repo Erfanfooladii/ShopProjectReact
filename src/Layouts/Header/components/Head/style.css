@@ -1,0 +1,35 @@
+
+.header__head {
+    background-color: #020231;
+}
+
+.header__head .__global-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.header__head .header__contact-list {
+    display: flex;
+    align-content: center;
+    list-style: none;
+    gap: 5px;
+}
+
+.header__head .header__contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.header__btns-profile {
+    display: flex;
+    gap: 4px;
+}
+
+.header__btns-profile .header__btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
