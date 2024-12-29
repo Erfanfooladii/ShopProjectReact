@@ -6,6 +6,7 @@ import { fetchProductApi } from "../../utils/fetchProducts";
 import { ShowPageContext } from "../../contexts/showPageContext";
 import { PaginationContext } from "../../contexts/paginationContext";
 import { GetApiContext } from "../../contexts/getApiContext";
+import { SearchContext } from "../../contexts/searchContext";
 
 const ProdcutList = () => {
     const [data,setData]=useState([])
@@ -15,12 +16,12 @@ const ProdcutList = () => {
     const {selectLimitShowPage}=useContext(ShowPageContext)
     const {selectPagination}=useContext(PaginationContext)
     const {setDataApi}=useContext(GetApiContext)
-    
+    const {searchValue}=useContext(SearchContext)
     useEffect(() => {
         const getApi=async ()=>{
             setIsLoading(true)
             try {
-                const data=await fetchProductApi({category:[...selectValueCategory],limit:selectLimitShowPage,page:selectPagination})
+                const data=await fetchProductApi({category:[...selectValueCategory],limit:selectLimitShowPage,page:selectPagination,search:searchValue})
                 setData(data.productsData)
                 setDataApi(data)
             } catch (error) {
@@ -31,8 +32,7 @@ const ProdcutList = () => {
         }
         getApi()
         document.title= "Procuts page"
-    }, [selectValueCategory,selectLimitShowPage,selectPagination]);
-    
+    }, [selectValueCategory,selectLimitShowPage,selectPagination,searchValue]);
     
     if (isLoading) {
         return <div>Loading data...</div>
