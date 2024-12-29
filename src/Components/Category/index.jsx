@@ -1,5 +1,5 @@
 import "./Category.css";
-import InputCheckbox from "../Inputs/inputCheckboxs/InputCheckbox";
+import InputCheckbox from "../Inputs/inputCheckboxs";
 import { useContext, useState } from "react";
 import { CategoryContext } from "../../contexts/categoryContext";
 const Category = () => {

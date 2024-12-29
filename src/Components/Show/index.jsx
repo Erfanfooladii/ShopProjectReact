@@ -4,10 +4,10 @@ import { ShowPageContext } from "../../contexts/showPageContext";
 const ShowPage=()=>{
     const {setSelectLimitShowPage}=useContext(ShowPageContext)
     return(
-        <div className="container-showPage">
-            <div className="body-showPage">
+        <div className="show">
+            <div className="show__body">
                 <span>show</span>
-                <select onChange={(e)=>{setSelectLimitShowPage(e.target.value)}} >
+                <select className="show__body--select" onChange={(e)=>{setSelectLimitShowPage(e.target.value)}} >
                     <option value="10">10</option>
                     <option value="20">20</option>
                 </select>

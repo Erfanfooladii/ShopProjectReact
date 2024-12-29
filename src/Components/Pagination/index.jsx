@@ -10,12 +10,12 @@ const Pagination = ({ totalPages }) => {
      setSelectPagination(index + 1)
     }
   return (
-    <div className="container-pagination">
+    <div className="pagination">
       {
         Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
-            className={`${selectPagination === index+1 ? 'active' : ''}`}
+            className={`pagination--button ${selectPagination === index+1 ? 'active' : ''}`}
             onClick={ () => handeleChangePage(index)}
           >
             {index + 1}

@@ -1,6 +1,6 @@
 import "./ProductPage.css"
 import ProductList from "../../Components/product-list"
-import Pagination from "../../Components/Pagination/Pagination"
+import Pagination from "../../Components/Pagination"
 import ShowPage from "../../Components/Show"
 import { useContext } from "react"
 import { GetApiContext } from "../../contexts/getApiContext"
