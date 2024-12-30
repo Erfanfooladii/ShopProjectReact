@@ -5,7 +5,7 @@ import { PaginationProvider } from './contexts/paginationContext'
 import { SearchProvider } from './contexts/searchContext'
 import { ShowPageProvider } from './contexts/showPageContext'
 import Header from './Layouts/Header'
-import ProductPage from './Pages/Home'
+import HomePage from './Pages/Home'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <GetApiProvider>
               <SearchProvider>
                 <Header/>
-                <ProductPage/>
+                <HomePage/>
               </SearchProvider>
             </GetApiProvider>
           </PaginationProvider>

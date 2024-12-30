@@ -6,7 +6,7 @@ import { useContext } from "react"
 import { GetApiContext } from "../../contexts/getApiContext"
 import TopSelling from "../../Components/TopSellins"
 import Category from "../../Components/Category"
-const ProductPage=()=>{
+const HomePage=()=>{
     const {dataApi}=useContext(GetApiContext)
     return(
         <div className="home __global-container">
@@ -26,4 +26,4 @@ const ProductPage=()=>{
         </div>
     )
 }
-export default ProductPage
+export default HomePage
