@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { CategoryProvider } from './contexts/categoryContext'
 import { GetApiProvider } from './contexts/getApiContext'
@@ -16,7 +17,9 @@ function App() {
             <GetApiProvider>
               <SearchProvider>
                 <Header/>
-                <HomePage/>
+                <Routes>
+                  <Route path='/' element={<HomePage/>} />
+                </Routes>
               </SearchProvider>
             </GetApiProvider>
           </PaginationProvider>
