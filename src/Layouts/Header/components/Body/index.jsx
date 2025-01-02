@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./style.css"
-import { SearchContext } from "../../../../contexts/searchContext";
+import { SearchContext } from "../../../../Contexts/searchContext";
 const Body = () => {
     const [textValue,setTextValue]=useState("")
     const { setSearchValue }=useContext(SearchContext)

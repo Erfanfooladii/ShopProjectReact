@@ -1,27 +1,21 @@
 import "./ProductList.css"
 import ProductCard from "../ProductCard";
-import { CategoryContext } from "../../../../contexts/categoryContext";
 import { useContext, useEffect, useState } from "react";
 import { fetchProductApi } from "../../../../utils/fetchProducts";
-import { ShowPageContext } from "../../../../contexts/showPageContext";
-import { PaginationContext } from "../../../../contexts/paginationContext";
-import { GetApiContext } from "../../../../contexts/getApiContext";
-import { SearchContext } from "../../../../contexts/searchContext";
+import { GetApiContext } from "../../../../Contexts/getApiContext";
+import { SearchContext } from "../../../../Contexts/searchContext";
 
-const ProdcutList = () => {
+const ProdcutList = ({category,limitShowPage,pagination}) => {
     const [data,setData]=useState([])
     const [isLoading,setIsLoading]=useState(false)
     const [error,setError]=useState(undefined)
-    const {selectValueCategory}=useContext(CategoryContext)
-    const {selectLimitShowPage}=useContext(ShowPageContext)
-    const {selectPagination}=useContext(PaginationContext)
     const {setDataApi}=useContext(GetApiContext)
     const {searchValue}=useContext(SearchContext)
     useEffect(() => {
         const getApi=async ()=>{
             setIsLoading(true)
             try {
-                const data=await fetchProductApi({category:[...selectValueCategory],limit:selectLimitShowPage,page:selectPagination,search:searchValue})
+                const data=await fetchProductApi({category:[...category],limit:limitShowPage,page:pagination,search:searchValue})
                 setData(data.productsData)
                 setDataApi(data)
             } catch (error) {
@@ -32,7 +26,7 @@ const ProdcutList = () => {
         }
         getApi()
         document.title= "Procuts page"
-    }, [selectValueCategory,selectLimitShowPage,selectPagination,searchValue]);
+    }, [category,limitShowPage,pagination,searchValue]);
     
     if (isLoading) {
         return <div>Loading data...</div>

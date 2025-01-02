@@ -1,9 +1,7 @@
 import "./Category.css";
 import InputCheckbox from "../inputCheckboxs";
-import { useContext, useState } from "react";
-import { CategoryContext } from "../../../../contexts/categoryContext";
-const Category = () => {
-    const {setSelectValueCategory}=useContext(CategoryContext)
+import { useState } from "react";
+const Category = ({setCategory}) => {
     const categories = [
         { name: 'Electronics', id: '6748dfa3c9017c78628d4a87' },
         { name: 'Home & Garden', id: '6748dfa3c9017c78628d4a8d' },
@@ -24,7 +22,7 @@ const Category = () => {
             }
             return updated;
         });
-        setSelectValueCategory((prev) => {
+        setCategory((prev) => {
             const updated = new Set(prev);
             if (updated.has(name)) {
                 updated.delete(name);
