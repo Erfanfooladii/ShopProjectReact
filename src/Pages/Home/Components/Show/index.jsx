@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./ShowPage.css"
-import { ShowPageContext } from "../../contexts/showPageContext";
+import { ShowPageContext } from "../../../../contexts/showPageContext";
 const ShowPage=()=>{
     const {setSelectLimitShowPage}=useContext(ShowPageContext)
     return(

@@ -1,4 +1,4 @@
-import Stars from "../Stars/Stars";
+import Stars from "./Components/Stars/Stars";
 import "./ProductCard.css";
 
 const ProductCard = ({ productImage, category, productName, productPrice }) => {

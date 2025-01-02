@@ -1,12 +1,12 @@
 import "./ProductList.css"
 import ProductCard from "../ProductCard";
-import { CategoryContext } from "../../contexts/categoryContext";
+import { CategoryContext } from "../../../../contexts/categoryContext";
 import { useContext, useEffect, useState } from "react";
-import { fetchProductApi } from "../../utils/fetchProducts";
-import { ShowPageContext } from "../../contexts/showPageContext";
-import { PaginationContext } from "../../contexts/paginationContext";
-import { GetApiContext } from "../../contexts/getApiContext";
-import { SearchContext } from "../../contexts/searchContext";
+import { fetchProductApi } from "../../../../utils/fetchProducts";
+import { ShowPageContext } from "../../../../contexts/showPageContext";
+import { PaginationContext } from "../../../../contexts/paginationContext";
+import { GetApiContext } from "../../../../contexts/getApiContext";
+import { SearchContext } from "../../../../contexts/searchContext";
 
 const ProdcutList = () => {
     const [data,setData]=useState([])

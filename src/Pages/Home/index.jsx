@@ -1,11 +1,11 @@
 import "./ProductPage.css"
-import ProductList from "../../Components/product-list"
-import Pagination from "../../Components/Pagination"
-import ShowPage from "../../Components/Show"
+import ProductList from "./Components/ProductList"
+import Pagination from "./Components/Pagination"
+import ShowPage from "./Components/Show"
 import { useContext } from "react"
 import { GetApiContext } from "../../contexts/getApiContext"
-import TopSelling from "../../Components/TopSellins"
-import Category from "../../Components/Category"
+import TopSelling from "./Components/TopSellins"
+import Category from "./Components/Category"
 const HomePage=()=>{
     const {dataApi}=useContext(GetApiContext)
     return(

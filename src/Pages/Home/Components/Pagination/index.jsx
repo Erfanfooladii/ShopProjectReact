@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Pagination.css";
-import { PaginationContext } from "../../contexts/paginationContext";
+import { PaginationContext } from "../../../../contexts/paginationContext";
 
 const Pagination = ({ totalPages }) => {
     const { selectPagination , setSelectPagination} = useContext(PaginationContext);

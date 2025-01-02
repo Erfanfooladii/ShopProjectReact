@@ -1,7 +1,7 @@
 import "./Category.css";
-import InputCheckbox from "../Inputs/inputCheckboxs";
+import InputCheckbox from "../inputCheckboxs";
 import { useContext, useState } from "react";
-import { CategoryContext } from "../../contexts/categoryContext";
+import { CategoryContext } from "../../../../contexts/categoryContext";
 const Category = () => {
     const {setSelectValueCategory}=useContext(CategoryContext)
     const categories = [
