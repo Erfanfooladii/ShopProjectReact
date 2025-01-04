@@ -1,22 +1,22 @@
 
-.header__head {
+.header__header-top {
     background-color: #020231;
 }
 
-.header__head .__global-container {
+.header__header-top .__global-container {
     display: flex;
     justify-content: space-between;
     padding: 5px;
 }
 
-.header__head .header__contact-list {
+.header__header-top .header__contact-list {
     display: flex;
     align-content: center;
     list-style: none;
     gap: 5px;
 }
 
-.header__head .header__contact-item {
+.header__header-top .header__contact-item {
     display: flex;
     align-items: center;
 }

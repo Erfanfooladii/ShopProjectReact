@@ -1,7 +1,7 @@
 import "./style.css"
-const Head=() => {
+const HeaderTop=() => {
     return(
-        <div className="header__head">
+        <div className="header__header-top">
             <div className="__global-container">
                 <ul className="header__contact-list">
                     <li className="header__contact-item">
@@ -41,4 +41,4 @@ const Head=() => {
         </div>
     )
 };
-export default Head;
+export default HeaderTop;

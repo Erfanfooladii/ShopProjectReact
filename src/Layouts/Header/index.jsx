@@ -1,11 +1,11 @@
-import Body from "./components/Body";
-import Head from "./components/Head";
+import HeaderContent from "./Components/HeaderContent";
+import HeaderTop from "./Components/HeaderTop";
 import "./Header.css"
 const Header=()=>{
     return (
     <header className="header">
-        <Head/>
-        <Body/>
+        <HeaderTop/>
+        <HeaderContent/>
     </header>
     )
 }

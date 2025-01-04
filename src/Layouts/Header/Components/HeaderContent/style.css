@@ -1,42 +1,42 @@
-.header__body {
+.header__header-content {
     background-color: #020216;
     padding: 30px 0;
 }
 
-.header__body .__global-container {
+.header__header-content .__global-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__body .header__shop-name {
+.header__header-content .header__shop-name {
     font-size: x-large;
 }
 
-.header__body .header__search-box {
+.header__header-content .header__search-box {
     display: flex;
     border-radius: 20px;
     border: 1px solid #c2c2c2;
 }
 
-.header__body .header__search-box .header__search-select {
+.header__header-content .header__search-box .header__search-select {
     border: none;
     padding: 0 18px;
     border-radius: 20px 0 0 20px;
 }
 
-.header__body .header__search-box .header__search-input {
+.header__header-content .header__search-box .header__search-input {
     border: none;
     padding: 8px 5px;
     font-size: larger;
     min-width: 320px;
 }
 
-.header__body .header__search-box .header__search-input:focus {
+.header__header-content .header__search-box .header__search-input:focus {
     outline: none;
 }
 
-.header__body .header__search-box .header__search-button {
+.header__header-content .header__search-box .header__search-button {
     border: none;
     padding: 0 18px;
     font-size: small;
@@ -46,16 +46,16 @@
     cursor: pointer;
 }
 
-.header__body .header__search-box .header__search-button:hover {
+.header__header-content .header__search-box .header__search-button:hover {
     background-color: rgb(248, 104, 104);
 }
 
-.header__body .header__route-btn {
+.header__header-content .header__route-btn {
     display: flex;
     gap: 5px;
 }
 
-.header__body .header__route-btn .header__btn {
+.header__header-content .header__route-btn .header__btn {
     color: #fff;
     display: flex;
     gap: 2px;

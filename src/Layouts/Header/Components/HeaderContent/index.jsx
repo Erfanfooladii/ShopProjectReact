@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "./style.css"
 import { SearchContext } from "../../../../Contexts/searchContext";
-const Body = () => {
+const HeaderContent = () => {
     const [textValue,setTextValue]=useState("")
     const { setSearchValue }=useContext(SearchContext)
     const searchHandele=(e)=>{
@@ -10,7 +10,7 @@ const Body = () => {
     }
     
     return(
-        <div className="header__body">
+        <div className="header__header-content">
             <div className="__global-container">
                 <div className="header__shop-name">
                     <h1 className="header__shop-title">Electro</h1>
@@ -42,4 +42,4 @@ const Body = () => {
         </div>
     )
 };
-export default Body;
+export default HeaderContent;
