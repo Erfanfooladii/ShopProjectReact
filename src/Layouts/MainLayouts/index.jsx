@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import { GetApiProvider } from './Contexts/getApiContext'
-import { SearchProvider } from './Contexts/searchContext'
-import Header from './Layouts/Header'
-import HomePage from './Pages/Home'
+import './index.css'
+import { GetApiProvider } from '../../Contexts/getApiContext'
+import { SearchProvider } from '../../Contexts/searchContext'
+import Header from '../Header'
+import HomePage from '../../Pages/Home'
 
-function App() {
+function MainLayouts() {
   return (
     <>
       <GetApiProvider>
@@ -20,4 +20,4 @@ function App() {
   )
 }
 
-export default App
+export default MainLayouts;

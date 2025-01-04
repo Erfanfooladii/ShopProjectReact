@@ -2,13 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import 'normalize.css'
-import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
+import MainLayouts from './Layouts/MainLayouts'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <MainLayouts />
     </BrowserRouter>
   </StrictMode>
 )
