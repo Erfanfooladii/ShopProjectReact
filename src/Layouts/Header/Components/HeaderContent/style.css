@@ -30,6 +30,7 @@
     padding: 8px 5px;
     font-size: larger;
     min-width: 320px;
+    background-color: #fff;
 }
 
 .header__header-content .header__search-box .header__search-input:focus {
