@@ -4,18 +4,18 @@
     flex-direction: column;
     gap: 60px;
 }
-.home__body{
+.home__section{
     display: flex;
 }
-.home__body--list{
+.home__section--list{
     display: flex;
     gap: 10px;
     flex-direction: column;
     padding: 10px;
 }
-/* .home__body--right{
-
-} */
+.home__section--right{
+    min-width: 200px;
+}
 .home__footer{
     display: flex;
     justify-content: center;

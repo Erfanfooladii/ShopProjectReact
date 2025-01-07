@@ -1,5 +1,5 @@
 .card{
-    width: 30%;
+    width: 260px;
     border: 2px solid #eeeeee;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 
-.card__body{
+.card__section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,19 +19,19 @@
     padding: 10px 0;
     gap: 5px;
 }
-.card__body__category{
+.card__section__category{
     font-weight: 100;
     color: #8d8d8d;
     font-size: large;
 }
-.card__body__name{
+.card__section__name{
     font-size: larger;
 }
-.card__body__price{
+.card__section__price{
     color: red;
     font-size: x-large;
 }
-.card__body__price--off{
+.card__section__price--off{
     color: #8d8d8d;
     text-decoration: line-through;
 }

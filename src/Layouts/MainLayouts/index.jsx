@@ -7,8 +7,7 @@ import HomePage from '../../Pages/Home'
 
 function MainLayouts() {
   return (
-    <>
-      <GetApiProvider>
+    <GetApiProvider>
         <SearchProvider>
           <Header/>
           <Routes>
@@ -16,7 +15,6 @@ function MainLayouts() {
           </Routes>
         </SearchProvider>
       </GetApiProvider>
-    </>
   )
 }
 

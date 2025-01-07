@@ -18,12 +18,12 @@ const HomePage=()=>{
     },[limitShowPage,category,searchValue])
     return(
         <div className="home __global-container">
-            <div className="home__body">
-                <div className="home__body--right">
+            <div className="home__section">
+                <div className="home__section--right">
                     <Category setCategory={setCategory} />
                     <TopSelling />
                 </div>
-                <div className="home__body--list">
+                <div className="home__section--list">
                     <ShowPage setLimitShowPage={setLimitShowPage} />
                     <ProductList
                         category={category}

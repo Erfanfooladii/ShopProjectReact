@@ -6,11 +6,11 @@ const ProductCard = ({ productImage, category, productName, productPrice }) => {
     return (
         <div className="card">
             <img className="card__image" loading="lazy" src={productImage} alt={`${productName} image`} />
-            <div className="card__body">
-                <h1 className="card__body__category">{category}</h1>
-                <h2 className="card__body__name">{productName}</h2>
-                <span className="card__body__price">${productPrice} <small className="card__body__price--off">$99</small></span>
-                <Stars value={1}/>
+            <div className="card__section">
+                <h1 className="card__section__category">{category}</h1>
+                <h2 className="card__section__name">{productName}</h2>
+                <span className="card__section__price">${productPrice} <small className="card__body__price--off">$99</small></span>
+                <Stars value={4}/>
             </div>
             <div className="card__button--container">
                 <button className="card__button--add">

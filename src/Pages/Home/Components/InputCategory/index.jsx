@@ -1,5 +1,5 @@
-import "./InputCheckbox.css"
-const InputCheckbox=({name,isChecked,checked,disabled})=>{
+import "./style.css"
+const InputCategory=({name,isChecked,checked,disabled})=>{
     return(
         <div className="item-check">
             <input type="checkbox" disabled={disabled} checked={checked} onChange={isChecked} id={name} />
@@ -7,4 +7,4 @@ const InputCheckbox=({name,isChecked,checked,disabled})=>{
         </div>
     )
 };
-export default InputCheckbox
+export default InputCategory;

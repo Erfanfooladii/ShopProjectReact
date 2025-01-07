@@ -1,5 +1,5 @@
-import "./Category.css";
-import InputCheckbox from "../inputCheckboxs";
+import "./style.css";
+import InputCategory from "../InputCategory";
 import { useState } from "react";
 const Category = ({setCategory}) => {
     const categories = [
@@ -35,11 +35,11 @@ const Category = ({setCategory}) => {
     
     const isAnyChecked=checked.size > 0
     return (
-        <div className="category">
+        <form className="category">
             <h2>CATEGORIES</h2>
             {
                 categories.map((item) => (
-                    <InputCheckbox
+                    <InputCategory
                         disabled={isAnyChecked && !checked.has(item.id)}           
                         key={item.id}
                         name={item.name}
@@ -48,7 +48,7 @@ const Category = ({setCategory}) => {
                     />
                 ))
             }
-        </div>
+        </form>
     );
 };
 
