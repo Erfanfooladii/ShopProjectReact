@@ -2,8 +2,14 @@
     display: flex;
     width: 100%;
     color: #ffffff;
+    border-top: 3px solid #ff0000;
+    flex-direction: column;
 }
-
+.footer__top_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .footer__top{
     width: 100%;
     background-color: #020216;
@@ -14,15 +20,25 @@
 }
 .footer__top_box-title{
     font-weight: 700;
-    padding: 5px;
+    padding: 15px 0;
 }
 .footer__top_box-list{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 .footer__top_box-item{
     width: 100%;
     font-size: small; 
-    display: flex;  
+    display: flex;
+}
+
+.footer__bottom{
+    width: 100%;
+    background-color: #020231;
+}
+.footer__bottom-containder{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
 }

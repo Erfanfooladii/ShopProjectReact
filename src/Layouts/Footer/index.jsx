@@ -3,7 +3,7 @@ const Footer = (params) => {
     return(
         <footer className="footer">
             <div className="footer__top">
-                <div className="__global-container">
+                <div className="footer__top_container __global-container">
                     <div className="footer__top_box">
                         <h2 className="footer__top_box-title">ABOUT US</h2>
                         <ul className="footer__top_box-list">
@@ -22,11 +22,41 @@ const Footer = (params) => {
                             </li>
                         </ul>
                     </div>
+                    <div className="footer__top_box">
+                            <h2 className="footer__top_box-title">CATEGORIES</h2>
+                            <ul className="footer__top_box-list">
+                                <li className="footer__top_box-item">Hot deals</li>
+                                <li className="footer__top_box-item">Laptops</li>
+                                <li className="footer__top_box-item">Smartphone</li>
+                                <li className="footer__top_box-item">Cameras</li>
+                                <li className="footer__top_box-item">Accessories</li>
+                            </ul>
+                        </div>
+                        <div className="footer__top_box">
+                            <h2 className="footer__top_box-title">INFORMATION</h2>
+                            <ul className="footer__top_box-list">
+                                <li className="footer__top_box-item">About Us</li>
+                                <li className="footer__top_box-item">Contact Us</li>
+                                <li className="footer__top_box-item">Privacy Police</li>
+                                <li className="footer__top_box-item">Orders and Returns</li>
+                                <li className="footer__top_box-item">Terms & Conditions</li>
+                            </ul>
+                        </div>
+                        <div className="footer__top_box">
+                            <h2 className="footer__top_box-title">SERVICE</h2>
+                            <ul className="footer__top_box-list">
+                                <li className="footer__top_box-item">My Account</li>
+                                <li className="footer__top_box-item">Viwe Cart</li>
+                                <li className="footer__top_box-item">Wishlist</li>
+                                <li className="footer__top_box-item">Track My Order</li>
+                                <li className="footer__top_box-item">Help</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
-            <div className="footer__buttom">
-                <div className="__global-container">
-                    
+            <div className="footer__bottom">
+                <div className="footer__bottom-containder __global-container">
+                    <p>Copyright  2025 All Rights Reserved</p>
                 </div>
             </div>
         </footer>
