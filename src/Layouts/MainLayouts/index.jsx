@@ -6,6 +6,7 @@ import Header from '../Header'
 import HomePage from '../../Pages/Home'
 import ProductPage from '../../Pages/ProductPage'
 import Footer from '../Footer'
+import Page404 from '../../Pages/404'
 
 function MainLayouts() {
   return (
@@ -13,8 +14,9 @@ function MainLayouts() {
         <SearchProvider>
           <Header/>
           <Routes>
-            <Route path='/' element={<HomePage/>}/>
-            <Route path='/:id' element={<ProductPage/>} />
+            <Route path='*' element={<Page404 />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/:id' element={<ProductPage />} />
           </Routes>
           <Footer/>
         </SearchProvider>
