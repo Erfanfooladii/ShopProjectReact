@@ -27,6 +27,7 @@ const ProdcutList = ({category,limitShowPage,pagination}) => {
         getApi()
         document.title= "Procuts page"
     }, [category,limitShowPage,pagination,searchValue]);
+    console.log(data);
     
     if (isLoading) {
         return <div>Loading data...</div>
@@ -44,6 +45,7 @@ const ProdcutList = ({category,limitShowPage,pagination}) => {
                         productPrice={Math.round(item.price)}
                         productImage={item.images[0]}
                         category={item.category.name}
+                        id={item._id}
                     />
                 })
             }

@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Stars from "./Components/Stars/Stars";
 import "./ProductCard.css";
+import { getProductId } from "../../../../utils/fetchProducts";
+import { useEffect } from "react";
 
-const ProductCard = ({ productImage, category, productName, productPrice }) => {
+const ProductCard = ({ productImage, category, productName, productPrice , id}) => {
+    const navigate=useNavigate()
 
     return (
         <div className="card">
@@ -13,7 +17,7 @@ const ProductCard = ({ productImage, category, productName, productPrice }) => {
                 <Stars value={4}/>
             </div>
             <div className="card__button--container">
-                <button className="card__button--add">
+                <button onClick={()=>{navigate(id)}} className="card__button--add">
                     Add To Cart
                 </button>
             </div>
