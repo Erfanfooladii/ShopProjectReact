@@ -1,3 +1,4 @@
+import "./style.css"
 const FooterBottom = () => {
     return(
         <div className="footer__bottom">

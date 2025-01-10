@@ -1,4 +1,5 @@
-const FooterTop = (params) => {
+import "./style.css";
+const FooterTop = () => {
     return(
         <div className="footer__top">
                 <div className="footer__top_container __global-container">
