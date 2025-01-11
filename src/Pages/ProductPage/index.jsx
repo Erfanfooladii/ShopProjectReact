@@ -1,7 +1,7 @@
 import "./style.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductApi } from "../../utils/fetchProducts";
+import { fetchProductApi, getProductId } from "../../utils/fetchProducts";
 
 const ProductPage = () => {
     const { id } = useParams();
@@ -13,7 +13,7 @@ const ProductPage = () => {
         const getApi = async () => {
             setIsLoading(true);
             try {
-                const data = await fetchProductApi(id);
+                const data = await getProductId(id);
                 setData(data);
             } catch (error) {
                 setError(error.message);
