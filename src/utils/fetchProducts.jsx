@@ -12,12 +12,12 @@ export const fetchProductApi = async ({ search = '', category = [], page = 1, li
       console.error('Error fetching data:', error);
     }
   };
-  export const getProductId =async ({id})=>{
+  export const getProductId =async (id)=>{
     const baseURL = `https://kaaryar-ecom.liara.run/v1/products/${id}`;
     try {
       const res=await fetch(`${baseURL}/${id}`)
       const data=await res.json()
-      console.log(data)
+      
       
       return data
     } catch (error) {

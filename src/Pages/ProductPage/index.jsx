@@ -1,7 +1,7 @@
 import "./style.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductApi, getProductId } from "../../utils/fetchProducts";
+import { getProductId } from "../../utils/fetchProducts";
 
 const ProductPage = () => {
     const { id } = useParams();
@@ -14,6 +14,7 @@ const ProductPage = () => {
             setIsLoading(true);
             try {
                 const data = await getProductId(id);
+                console.log(id)
                 setData(data);
             } catch (error) {
                 setError(error.message);
@@ -22,8 +23,7 @@ const ProductPage = () => {
             }
         };
         getApi();
-    }, [id]);
-    console.log(data);
+    }, []);
     
     if (isLoading) {
         return <div>Loading...</div>;
