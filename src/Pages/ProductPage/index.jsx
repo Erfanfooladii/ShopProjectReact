@@ -14,9 +14,11 @@ const ProductPage = () => {
         const getApi = async () => {
             setIsLoading(true);
             try {
+
                 console.log(id)
                 return await getProductId(id);
                 // setData(data);
+
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -25,6 +27,8 @@ const ProductPage = () => {
         };
         getApi();
     }, []);
+    console.log(data);
+    
     
     if (isLoading) {
         return <div>Loading...</div>;
