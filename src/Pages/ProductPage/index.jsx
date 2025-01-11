@@ -5,17 +5,18 @@ import { getProductId } from "../../utils/fetchProducts";
 
 const ProductPage = () => {
     const { id } = useParams();
-    const [data, setData] = useState();
+    // const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(undefined);
+
     
     useEffect(() => {
         const getApi = async () => {
             setIsLoading(true);
             try {
-                const data = await getProductId(id);
                 console.log(id)
-                setData(data);
+                return await getProductId(id);
+                // setData(data);
             } catch (error) {
                 setError(error.message);
             } finally {
