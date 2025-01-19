@@ -4,11 +4,17 @@ import './index.css'
 import 'normalize.css'
 import { BrowserRouter } from 'react-router-dom'
 import MainLayouts from './Layouts/MainLayouts'
+import { GetApiProvider } from './Contexts/getApiContext'
+import { SearchProvider } from './Contexts/searchContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <MainLayouts />
+      <GetApiProvider>
+        <SearchProvider>
+          <MainLayouts />
+        </SearchProvider>
+      </GetApiProvider>
     </BrowserRouter>
   </StrictMode>
 )
