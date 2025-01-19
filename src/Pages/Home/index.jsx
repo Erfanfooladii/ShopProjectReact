@@ -16,6 +16,7 @@ const HomePage=()=>{
     useEffect(()=>{
         setPagination(1)
     },[limitShowPage,category,searchValue])
+    
     return(
         <div className="home __global-container">
             <div className="home__section">
