@@ -27,7 +27,6 @@ const ProdcutList = ({category,limitShowPage,pagination}) => {
         getApi()
         document.title= "Procuts page"
     }, [category,limitShowPage,pagination,searchValue]);
-    console.log(data);
     
     if (isLoading) {
         return <div>Loading data...</div>
