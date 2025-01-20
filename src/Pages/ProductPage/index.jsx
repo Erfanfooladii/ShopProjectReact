@@ -27,7 +27,6 @@ const ProductPage = () => {
         };
         getApi();
     }, []);
-    console.log(data);
     
     
     if (isLoading) {
@@ -38,6 +37,8 @@ const ProductPage = () => {
     }
     return (
         <div className="product">
+
+            <div>Product Page for {id}</div>
             <div className="product__container ">
                 <div className="product__iamges">
                 </div>
