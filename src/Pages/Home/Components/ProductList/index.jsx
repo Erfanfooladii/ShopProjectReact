@@ -11,19 +11,20 @@ const ProdcutList = ({category,limitShowPage,pagination}) => {
     const [error,setError]=useState(undefined)
     const {setDataApi}=useContext(GetApiContext)
     const {searchValue}=useContext(SearchContext)
-    useEffect(() => {
-        const getApi=async ()=>{
-            setIsLoading(true)
-            try {
-                const data=await fetchProductApi({category:[...category],limit:limitShowPage,page:pagination,search:searchValue})
-                setData(data.productsData)
-                setDataApi(data)
-            } catch (error) {
-                setError(error.message)
-            } finally{
-                setIsLoading(false)
-            }
+
+    const getApi=async ()=>{
+        setIsLoading(true)
+        try {
+            const data=await fetchProductApi({category:[...category],limit:limitShowPage,page:pagination,search:searchValue})
+            setData(data.productsData)
+            setDataApi(data)
+        } catch (error) {
+            setError(error.message)
+        } finally{
+            setIsLoading(false)
         }
+    }
+    useEffect(() => {
         getApi()
         document.title= "Procuts page"
     }, [category,limitShowPage,pagination,searchValue]);
