@@ -17,7 +17,7 @@ const ProductCard = ({ productImage, category, productName, productPrice , id}) 
                 <Stars value={4}/>
             </div>
             <div className="card__button--container">
-                <button onClick={()=>{navigate(id)}} className="card__button--add">
+                <button onClick={()=>{navigate(`/${id}`)}} className="card__button--add">
                     Add To Cart
                 </button>
             </div>

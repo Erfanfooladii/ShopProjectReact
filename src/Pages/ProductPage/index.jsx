@@ -8,19 +8,22 @@ const ProductPage = () => {
     const [data, setData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(undefined);
-    
-    useEffect(() => {
-        const getApi = async () => {
+
+    const getApi = async () => {
             setIsLoading(true);
             try {
                 const data = await getProductId(id);
                 setData(data);
+                console.log('data', data)
+
             } catch (error) {
                 setError(error.message);
             } finally {
                 setIsLoading(false);
             }
-        };
+    };
+
+    useEffect(() => {
         getApi();
     }, []);
     
@@ -33,6 +36,8 @@ const ProductPage = () => {
     }
     return (
         <div className="product">
+
+            <div>Product Page for {id}</div>
             <div className="product__container ">
                 <div className="product__iamges">
                 </div>
