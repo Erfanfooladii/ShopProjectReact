@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Stars from "./Components/Stars/Stars";
 import "./ProductCard.css";
-import { getProductId } from "../../../../utils/fetchProducts";
-import { useEffect } from "react";
 
 const ProductCard = ({ productImage, category, productName, productPrice , id}) => {
     const navigate=useNavigate()
