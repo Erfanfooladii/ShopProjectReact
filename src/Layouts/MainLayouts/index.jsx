@@ -27,14 +27,9 @@ function MainLayouts() {
     <>
       <Header />
       <Routes>
-        {status && pathname !== '/' ? (
-          <Route path='*' element={<Page404 />} />
-        ) : (
-          <>
-            <Route path='/' element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
             <Route path='/:id' element={<ProductPage />} />
-          </>
-        )}
+          <Route path='*' element={<Page404 />} />
       </Routes>
       <Footer />
     </>
@@ -42,3 +37,4 @@ function MainLayouts() {
 }
 
 export default MainLayouts;
+
