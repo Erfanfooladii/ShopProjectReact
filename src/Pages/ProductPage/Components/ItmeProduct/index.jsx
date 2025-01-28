@@ -6,10 +6,10 @@ import PriceItem from "./Components/PriceItem";
 import ReviewItem from "./Components/ReviewsItem";
 import ShareItem from "./Components/ShareItem";
 import "./style.css";
-const ItemProduct = ({ data }) => {
+const ItemProduct = ({ data , image }) => {
   return (
     <div className="product__item">
-      <ImageItem data={data} />
+      <ImageItem image={image} data={data} />
       <div className="product__item-detail">
         <h1 className="product__title">{data.name}</h1>
         <ReviewItem data={data} />

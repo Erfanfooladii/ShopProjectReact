@@ -28,7 +28,13 @@ const ProductPage = () => {
     useEffect(() => {
         getApi();
     }, []);
-    
+
+    const [image,setImage]=useState(false)
+    const imageHandler=()=>{
+        setImage(!image)
+    }
+    console.log(image);
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
@@ -37,8 +43,8 @@ const ProductPage = () => {
     }
     return (
         <div className="product __global-container">
-                <ImagesProduct data={data} />
-                <ItemProduct data={data} />
+                <ImagesProduct imageHandler={imageHandler} image={image} data={data} />
+                <ItemProduct image={image} data={data} />
         </div>
     );
 };
