@@ -3,6 +3,10 @@
     gap: 5px;
     align-items: end;
 }
+.product__price--original{
+    color: #ff0000;
+    font-size: 35px;
+}
 .product__price--stock{
     color: #ff0000;
     font-weight: 600;

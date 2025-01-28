@@ -11,10 +11,6 @@
     font-weight: 600;
     color: #35365e;
 }
-.product__price--original{
-    color: #ff0000;
-    font-size: 35px;
-}
 .product__price--discounted{
     font-size: 25px;
     color: #4b4b4c;
