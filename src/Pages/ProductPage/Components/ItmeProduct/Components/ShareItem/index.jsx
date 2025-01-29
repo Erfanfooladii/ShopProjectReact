@@ -152,8 +152,8 @@ const ShareItem=()=>{
         <div className="product__share">
           <span className="product__share-title">SHARE: </span>
           {
-            shareLinks.map((item)=>{
-                return item.link
+            shareLinks.map((item,index)=>{
+                return <span key={index} >{item.link}</span>
             })
           }
         </div>
