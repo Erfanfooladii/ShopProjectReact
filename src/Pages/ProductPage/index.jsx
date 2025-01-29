@@ -16,8 +16,6 @@ const ProductPage = () => {
             try {
                 const data = await getProductId(id);
                 setData(data);
-                console.log('data', data)
-
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -33,7 +31,6 @@ const ProductPage = () => {
     const imageHandler=()=>{
         setImage(!image)
     }
-    console.log(image);
 
     if (isLoading) {
         return <div>Loading...</div>;
