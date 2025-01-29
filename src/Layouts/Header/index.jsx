@@ -1,6 +1,6 @@
 import HeaderContent from "./Components/HeaderContent";
 import HeaderTop from "./Components/HeaderTop";
-import "./Header.css"
+import "./style.css"
 const Header=()=>{
     return (
     <header className="header">
