@@ -7,6 +7,7 @@ import ProductPage from '../../Pages/ProductPage';
 import Footer from '../Footer';
 import Page404 from '../../Pages/404';
 import { useContext, useEffect, useState } from 'react';
+import CartPage from '../../Pages/CartPage';
 
 function MainLayouts() {
   const [validIds, setValidIds] = useState([]);
@@ -29,7 +30,8 @@ function MainLayouts() {
       <Routes>
       <Route path='/' element={<HomePage />} />
             <Route path='/:id' element={<ProductPage />} />
-          <Route path='*' element={<Page404 />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='*' element={<Page404 />} />
       </Routes>
       <Footer />
     </>
