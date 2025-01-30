@@ -1,6 +1,6 @@
 import { fetchProductApi, getProductId } from "../../utils/fetchProducts";
 import "./style.css"
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 const CartPage=()=>{
     const [data, setData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
