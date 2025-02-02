@@ -4,9 +4,8 @@ import "./ProductCard.css";
 
 const ProductCard = ({ productImage, category, productName, productPrice , id}) => {
     const navigate=useNavigate()
-
     return (
-        <div className="card">
+        <div onClick={()=>{navigate(`/${id}`)}} className="card">
             <img className="card__image" loading="lazy" src={productImage} alt={`${productName} image`} />
             <div className="card__section">
                 <h1 className="card__section__category">{category}</h1>
@@ -15,7 +14,7 @@ const ProductCard = ({ productImage, category, productName, productPrice , id}) 
                 <Stars value={4}/>
             </div>
             <div className="card__button--container">
-                <button onClick={()=>{navigate(`/${id}`)}} className="card__button--add">
+                <button className="card__button--add">
                     Add To Cart
                 </button>
             </div>

@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 5px;
     position: relative;
+    cursor: pointer;
 }
 .card:hover{
     border: 2px solid red;
