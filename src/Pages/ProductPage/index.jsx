@@ -24,7 +24,7 @@ const ProductPage = () => {
     };
 
     useEffect(() => {
-        document.title=`Product | ${data.name}`
+        document.title=`Product | ${data?.name}`
         getApi();
     }, []);
 
