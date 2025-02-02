@@ -1,7 +1,20 @@
+import { useContext, useState } from "react";
 import "./style.css"
+import { CartContext } from "../../../../../../Contexts/cartContext";
 const FormItem=({data})=>{
+  const {setCartValue,cartValue}=useContext(CartContext)
+  const [isAdd,setIsAdd]=useState(false)
+  const handeleFormData=(e)=>{
+    e.preventDefault();
+    if (isAdd) {
+      setCartValue([...cartValue,data])
+    }else{
+      const removeDataCart=cartValue.filter((item)=>data.id!==item.id)
+      setCartValue(removeDataCart)
+    }
+  }
     return (
-        <form className="product__form">
+        <form className="product__form" onSubmit={handeleFormData} >
           <div className="product__options">
             <div className="product__options_container">
               <label className="product__options--label" htmlFor="size_product">
@@ -32,7 +45,7 @@ const FormItem=({data})=>{
               <label className="product__buy--quantity-label">Qyt </label>
               <input type="number" className="product__buy--quantity-input" />
             </div>
-            <button className="product__buy--button">Add to cart</button>
+            <button type="submit" onClick={()=>setIsAdd(!isAdd)} className="product__buy--button">{isAdd?'Remove cart':'Add to cart'}</button>
           </div>
         </form>
     )
