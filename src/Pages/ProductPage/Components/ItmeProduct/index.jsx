@@ -15,7 +15,7 @@ const ItemProduct = ({ data , image }) => {
         <ReviewItem data={data} />
         <PriceItem data={data} />
         <p className="product__description">{data.description}</p>
-        <FormItem/>
+        <FormItem data={data}/>
         <ActionsItem/>
         <CategoryItem data={data}/>
         <ShareItem />
