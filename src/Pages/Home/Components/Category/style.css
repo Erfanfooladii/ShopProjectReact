@@ -1,6 +1,6 @@
-.category{
-    display: flex;
-    gap: 10px;
-    padding: 5px;
-    flex-direction: column;
+.category {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  flex-direction: column;
 }

@@ -1,9 +1,9 @@
-.footer__bottom{
-    width: 100%;
-    background-color: #020231;
+.footer__bottom {
+  width: 100%;
+  background-color: #020231;
 }
-.footer__bottom-containder{
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
+.footer__bottom-containder {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
 }

@@ -11,12 +11,13 @@
   margin: auto;
 }
 
-input, button {
+input,
+button {
   border: none;
   background-color: transparent;
   outline: none;
 }
-select:focus{
+select:focus {
   outline: none;
 }
 a {
@@ -30,7 +31,12 @@ img {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
@@ -45,7 +51,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;

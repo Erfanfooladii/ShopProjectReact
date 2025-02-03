@@ -1,16 +1,18 @@
-.show{
-    display: flex;
-    gap: 5px;
+.show {
+  display: flex;
+  gap: 5px;
 }
-.show__body{
-    border: 1px solid #000;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 40px;
+.show__body {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
 }
-.show__body--select{
-    height: 100%;
-    border: none;
+.show__body--select {
+  height: 100%;
+  border: none;
 }
-.show__body--select:focus{outline: none;}
+.show__body--select:focus {
+  outline: none;
+}

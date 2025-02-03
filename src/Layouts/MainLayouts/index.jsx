@@ -1,37 +1,37 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './index.css';
-import { GetApiContext } from '../../Contexts/getApiContext';
+//import { GetApiContext } from '../../Contexts/getApiContext';
 import Header from '../Header';
 import HomePage from '../../Pages/Home';
 import ProductPage from '../../Pages/ProductPage';
 import Footer from '../Footer';
 import Page404 from '../../Pages/404';
-import { useContext, useEffect, useState } from 'react';
+//import { useContext, useEffect, useState } from 'react';
 import CartPage from '../../Pages/CartPage';
 
 function MainLayouts() {
-  const [validIds, setValidIds] = useState([]);
-  const { dataApi } = useContext(GetApiContext);
-  const { pathname } = useLocation();
+  //const [validIds, setValidIds] = useState([]);
+  //const { dataApi } = useContext(GetApiContext);
+  //const { pathname } = useLocation();
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (dataApi.productsData) {
-      const listId = dataApi.productsData.map(item => item._id);
+      const listId = dataApi.productsData.map((item) => item._id);
       setValidIds(listId);
     }
-  }, [dataApi.productsData]);
+  }, [dataApi.productsData]); */
 
-  const isValidPath = validIds.includes(pathname.slice(1));
-  const status = !isValidPath;
+  //const isValidPath = validIds.includes(pathname.slice(1));
+  //const status = !isValidPath;
 
   return (
     <>
       <Header />
       <Routes>
-      <Route path='/' element={<HomePage />} />
-            <Route path='/:id' element={<ProductPage />} />
-            <Route path='/cart' element={<CartPage />} />
-            <Route path='*' element={<Page404 />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
     </>
@@ -39,4 +39,3 @@ function MainLayouts() {
 }
 
 export default MainLayouts;
-

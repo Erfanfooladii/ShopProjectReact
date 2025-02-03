@@ -1,7 +1,7 @@
-.footer{
-    display: flex;
-    width: 100%;
-    color: #ffffff;
-    border-top: 3px solid #ff0000;
-    flex-direction: column;
+.footer {
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+  border-top: 3px solid #ff0000;
+  flex-direction: column;
 }

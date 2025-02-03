@@ -1,28 +1,28 @@
-.itemSllin{
-    width: 100%;
-    display: flex;
-    gap: 5px;
-    align-items: center;
+.itemSllin {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
-.itemSllin__image{
-    width: 30%;
+.itemSllin__image {
+  width: 30%;
 }
-.itemSllin__detail{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+.itemSllin__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
-.itemSllin__detail__category{
-    font-size: 13px;
+.itemSllin__detail__category {
+  font-size: 13px;
 }
-.itemSllin__detail__name{
-    font-size: small;
-    color: #afafaf;
+.itemSllin__detail__name {
+  font-size: small;
+  color: #afafaf;
 }
-.itemSllin__detail__price{
-    color: red;
+.itemSllin__detail__price {
+  color: red;
 }
-.itemSllin__detail__price-off{
-    color: #afafaf;
-    text-decoration: line-through;
+.itemSllin__detail__price-off {
+  color: #afafaf;
+  text-decoration: line-through;
 }

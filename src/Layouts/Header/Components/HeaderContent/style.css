@@ -1,81 +1,81 @@
 .header__header-content {
-    background-color: #020216;
-    padding: 30px 0;
+  background-color: #020216;
+  padding: 30px 0;
 }
 
 .header__header-content .__global-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__shop-name {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .header__search-box {
-    display: flex;
-    border-radius: 20px;
-    border: 1px solid #c2c2c2;
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid #c2c2c2;
 }
 
 .header__search-select {
-    border: none;
-    padding: 0 18px;
-    border-radius: 20px 0 0 20px;
+  border: none;
+  padding: 0 18px;
+  border-radius: 20px 0 0 20px;
 }
 
 .header__search-input {
-    border: none;
-    padding: 8px 5px;
-    font-size: larger;
-    min-width: 320px;
-    background-color: #fff;
+  border: none;
+  padding: 8px 5px;
+  font-size: larger;
+  min-width: 320px;
+  background-color: #fff;
 }
 
 .header__search-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .header__search-button {
-    border: none;
-    padding: 0 18px;
-    font-size: small;
-    background-color: red;
-    color: #fff;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
+  border: none;
+  padding: 0 18px;
+  font-size: small;
+  background-color: red;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
 }
 
 .header__search-button:hover {
-    background-color: rgb(248, 104, 104);
+  background-color: rgb(248, 104, 104);
 }
 
 .header__route-btn {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .header__btn {
-    color: #fff;
-    display: flex;
-    gap: 2px;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    position: relative;
+  color: #fff;
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
 }
-.header__btn--counter{
-    position: absolute;
-    top: -15px;
-    right: -8px;
-    min-width: 20px;
-    min-height: 20px;
-    background-color: red;
-    border-radius: 50%;
-    font-size: small;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header__btn--counter {
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

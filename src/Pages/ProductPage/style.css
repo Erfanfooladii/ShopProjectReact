@@ -1,22 +1,22 @@
-.product{
-    display: flex;
-    align-items: center;
+.product {
+  display: flex;
+  align-items: center;
 }
-.product__item-detail{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.product__item-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.product__title{
-    font-weight: 600;
-    color: #35365e;
+.product__title {
+  font-weight: 600;
+  color: #35365e;
 }
-.product__price--discounted{
-    font-size: 25px;
-    color: #4b4b4c;
-    text-decoration:line-through;
+.product__price--discounted {
+  font-size: 25px;
+  color: #4b4b4c;
+  text-decoration: line-through;
 }
-.product__description{
-    color: #4b4b4c;
-    max-width: 100%;
+.product__description {
+  color: #4b4b4c;
+  max-width: 100%;
 }

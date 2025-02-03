@@ -1,11 +1,11 @@
-.product__share{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.product__share {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.product__share-link{
-    width: 20px;
+.product__share-link {
+  width: 20px;
 }
-.product__share-link svg{
-    width: 100%;
+.product__share-link svg {
+  width: 100%;
 }

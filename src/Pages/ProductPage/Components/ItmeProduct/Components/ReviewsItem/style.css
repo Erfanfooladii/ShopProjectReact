@@ -1,9 +1,9 @@
-.product__reviews{
-    display: flex;
+.product__reviews {
+  display: flex;
 }
-.product__reviews-stars{
-    min-width: 100px;
+.product__reviews-stars {
+  min-width: 100px;
 }
-.product__reviews-title{
-    color: #4b4b4c;
+.product__reviews-title {
+  color: #4b4b4c;
 }

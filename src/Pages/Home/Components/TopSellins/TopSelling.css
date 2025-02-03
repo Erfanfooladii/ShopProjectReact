@@ -1,12 +1,12 @@
-.selling{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.selling {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 /* .selling-title{} */
-.selling-list{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.selling-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }

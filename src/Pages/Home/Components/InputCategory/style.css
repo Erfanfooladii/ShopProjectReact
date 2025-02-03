@@ -1,9 +1,9 @@
 .item-check {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.item-check input[type="checkbox"] {
-    accent-color: red;
+.item-check input[type='checkbox'] {
+  accent-color: red;
 }

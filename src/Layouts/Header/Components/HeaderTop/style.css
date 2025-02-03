@@ -1,35 +1,34 @@
-
 .header__header-top {
-    background-color: #020231;
+  background-color: #020231;
 }
 
 .header__header-top .__global-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 .header__header-top .header__contact-list {
-    display: flex;
-    align-content: center;
-    list-style: none;
-    gap: 5px;
+  display: flex;
+  align-content: center;
+  list-style: none;
+  gap: 5px;
 }
 
 .header__header-top .header__contact-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__btns-profile {
-    display: flex;
-    gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 .header__btns-profile .header__btn {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    color: #fff;
-    border: none;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  border: none;
 }
