@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './style.css';
 import { CartContext } from '../../../../../../Contexts/cartContext';
 import PropTypes from 'prop-types';
@@ -6,16 +6,26 @@ import PropTypes from 'prop-types';
 const FormItem = ({ data }) => {
   const { setCartValue, cartValue } = useContext(CartContext);
   const [isAdd, setIsAdd] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+  useEffect(() => {
+    console.log(data._id);
 
+    const isProductCart = cartValue.some((item) => item._id === data._id);
+    setIsAdd(isProductCart);
+    console.log('is product: ', isProductCart);
+  }, []);
   const handleFormData = (e) => {
     e.preventDefault();
-    const updatedCartValue = isAdd
-      ? [...cartValue, { ...data, quantity }]
-      : cartValue.filter((item) => data.id !== item.id);
 
-    setCartValue(updatedCartValue);
-    setIsAdd(!isAdd);
+    if (isAdd) {
+      setIsAdd(false);
+      const removeDataCart = cartValue.filter((item) => item._id !== data._id);
+
+      setCartValue(removeDataCart);
+    } else {
+      setIsAdd(true);
+      setCartValue([...cartValue, data]);
+    }
+    console.log('aremso', cartValue);
   };
 
   return (
@@ -48,8 +58,6 @@ const FormItem = ({ data }) => {
           <input
             type="number"
             className="product__buy--quantity-input"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
             min="1"
           />
         </div>
@@ -63,7 +71,7 @@ const FormItem = ({ data }) => {
 
 FormItem.propTypes = {
   data: PropTypes.shape({
-    id: PropTypes.any.isRequired,
+    _id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
