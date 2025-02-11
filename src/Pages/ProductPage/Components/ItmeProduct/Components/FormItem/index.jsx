@@ -71,8 +71,8 @@ const FormItem = ({ data }) => {
 
 FormItem.propTypes = {
   data: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
-  }).isRequired,
+    _id: PropTypes.string,
+  }),
 };
 
 export default FormItem;

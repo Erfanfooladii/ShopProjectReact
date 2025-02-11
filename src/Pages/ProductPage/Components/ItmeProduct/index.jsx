@@ -28,10 +28,10 @@ const ItemProduct = ({ data, image }) => {
 
 ItemProduct.propTypes = {
   data: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
-  image: PropTypes.element.isRequired,
+    name: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  image: PropTypes.bool,
 };
 
 export default ItemProduct;

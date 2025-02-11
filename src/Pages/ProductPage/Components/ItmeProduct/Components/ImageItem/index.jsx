@@ -23,9 +23,9 @@ const ImageItem = ({ data, image }) => {
 ImageItem.propTypes = {
   data: PropTypes.shape({
     images: PropTypes.arrayOf(PropTypes.string),
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-  image: PropTypes.element.isRequired,
+    name: PropTypes.string,
+  }),
+  image: PropTypes.bool,
 };
 
 export default ImageItem;

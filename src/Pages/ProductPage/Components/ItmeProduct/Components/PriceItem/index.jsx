@@ -16,8 +16,8 @@ const PriceItem = ({ data }) => {
 
 PriceItem.propTypes = {
   data: PropTypes.shape({
-    price: PropTypes.number.isRequired,
-    discountedPrice: PropTypes.number.isRequired,
+    price: PropTypes.number,
+    discountedPrice: PropTypes.number,
   }),
 };
 

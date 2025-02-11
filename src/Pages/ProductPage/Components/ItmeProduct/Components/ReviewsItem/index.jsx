@@ -3,13 +3,15 @@ import Stars from '../../../../../../Components/Stars';
 import PropTypes from 'prop-types';
 
 const ReviewItem = ({ data }) => {
+  const reviewCount = data.reviewCount !== undefined ? data.reviewCount : 0;
+
   return (
     <div className="product__reviews">
       <div className="product__reviews-stars">
         <Stars value={data.rating} />
       </div>
       <p className="product__reviews-title">
-        {data.reviewCount} Review(s) | Add your review
+        {reviewCount} Review(s) | Add your review
       </p>
     </div>
   );
@@ -17,8 +19,8 @@ const ReviewItem = ({ data }) => {
 
 ReviewItem.propTypes = {
   data: PropTypes.shape({
-    rating: PropTypes.number.isRequired,
-    reviewCount: PropTypes.number.isRequired,
+    rating: PropTypes.number,
+    reviewCount: PropTypes.number,
   }).isRequired,
 };
 
