@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { getProductId } from '../../utils/fetchProducts';
 import ImagesProduct from './Components/ImagesProduct';
 import ItemProduct from './Components/ItmeProduct';
+import { LoadingProduct } from '../../Components/Loading';
+//import { LoadingProduct } from '../../Components/Loading';
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -34,7 +36,7 @@ const ProductPage = () => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <LoadingProduct />;
   }
   if (error) {
     return <div>Error: {error}</div>;

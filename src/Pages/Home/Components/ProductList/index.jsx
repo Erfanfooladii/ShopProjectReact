@@ -5,6 +5,7 @@ import { fetchProductApi } from '../../../../utils/fetchProducts';
 import { GetApiContext } from '../../../../Contexts/getApiContext';
 import { SearchContext } from '../../../../Contexts/searchContext';
 import PropTypes from 'prop-types';
+import LoadingList from '../../../../Components/Loading';
 
 const ProdcutList = ({ category, limitShowPage, pagination }) => {
   const [data, setData] = useState([]);
@@ -36,7 +37,7 @@ const ProdcutList = ({ category, limitShowPage, pagination }) => {
   }, [category, limitShowPage, pagination, searchValue]);
 
   if (isLoading) {
-    return <div>Loading data...</div>;
+    return <LoadingList />;
   }
   if (error) {
     return <div>Error: {error} </div>;
