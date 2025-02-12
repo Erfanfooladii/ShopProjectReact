@@ -8,6 +8,7 @@ import Footer from '../Footer';
 import Page404 from '../../Pages/404';
 //import { useContext, useEffect, useState } from 'react';
 import CartPage from '../../Pages/CartPage';
+import { ToastContainer } from 'react-toastify';
 
 function MainLayouts() {
   //const [validIds, setValidIds] = useState([]);
@@ -27,6 +28,7 @@ function MainLayouts() {
   return (
     <>
       <Header />
+      <ToastContainer position="top-center" />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:id" element={<ProductPage />} />

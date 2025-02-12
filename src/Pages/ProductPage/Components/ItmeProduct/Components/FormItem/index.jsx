@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import './style.css';
 import { CartContext } from '../../../../../../Contexts/cartContext';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 
 const FormItem = ({ data }) => {
   const { setCartValue, cartValue } = useContext(CartContext);
@@ -13,15 +14,16 @@ const FormItem = ({ data }) => {
     setIsAdd(isProductCart);
     console.log('is product: ', isProductCart);
   }, []);
+
   const handleFormData = (e) => {
     e.preventDefault();
-
     if (isAdd) {
       setIsAdd(false);
       const removeDataCart = cartValue.filter((item) => item._id !== data._id);
-
       setCartValue(removeDataCart);
+      toast.error('Removed from cart');
     } else {
+      toast.success('Added to cart');
       setIsAdd(true);
       setCartValue([...cartValue, data]);
     }
