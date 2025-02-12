@@ -1,4 +1,4 @@
-import './ProductPage.css';
+import './style.css';
 import ProductList from './Components/ProductList';
 import Pagination from './Components/Pagination';
 import ShowPage from './Components/Show';
@@ -7,6 +7,7 @@ import { GetApiContext } from '../../Contexts/getApiContext';
 import TopSelling from './Components/TopSellins';
 import Category from './Components/Category';
 import { SearchContext } from '../../Contexts/searchContext';
+
 const HomePage = () => {
   const { dataApi } = useContext(GetApiContext);
   const { searchValue } = useContext(SearchContext);
