@@ -38,6 +38,7 @@ const CartPage = () => {
         <ul className="cart__list">
           <li className="cart__list--item">
             <h1 className="cart__list-name">{data?.name}</h1>
+            <div className=""></div>
           </li>
         </ul>
       </div>
