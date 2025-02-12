@@ -5,7 +5,6 @@ import { getProductId } from '../../utils/fetchProducts';
 import ImagesProduct from './Components/ImagesProduct';
 import ItemProduct from './Components/ItmeProduct';
 import { LoadingProduct } from '../../Components/Loading';
-//import { LoadingProduct } from '../../Components/Loading';
 
 const ProductPage = () => {
   const { id } = useParams();
