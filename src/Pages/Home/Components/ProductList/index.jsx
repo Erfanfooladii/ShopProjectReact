@@ -1,4 +1,4 @@
-import './ProductList.css';
+import './style.css';
 import ProductCard from '../ProductCard';
 import { useContext, useEffect, useState } from 'react';
 import { fetchProductApi } from '../../../../utils/fetchProducts';
@@ -60,8 +60,8 @@ const ProdcutList = ({ category, limitShowPage, pagination }) => {
   );
 };
 ProdcutList.propTypes = {
-  category: PropTypes.array.isRequired,
-  limitShowPage: PropTypes.number.isRequired,
+  category: PropTypes.object,
+  limitShowPage: PropTypes.number,
   pagination: PropTypes.number.isRequired,
 };
 
