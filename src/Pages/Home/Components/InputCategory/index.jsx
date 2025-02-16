@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import './style.css';
-const InputCategory = ({ name, isChecked, checked, disabled }) => {
+
+const InputCategory = ({
+  name = 'name product',
+  isChecked = () => {},
+  checked = false,
+  disabled = false,
+}) => {
   return (
     <div className="item-check">
       <input
@@ -14,15 +20,13 @@ const InputCategory = ({ name, isChecked, checked, disabled }) => {
     </div>
   );
 };
+
 InputCategory.propTypes = {
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  checked: PropTypes.bool.isRequired,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  isChecked: PropTypes.bool,
+  isChecked: PropTypes.func,
 };
 
-InputCategory.defaultProps = {
-  disabled: false,
-};
 export default InputCategory;

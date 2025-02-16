@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Pagination.css';
+import './style.css';
 
 const Pagination = ({ totalPages, setPagination, pagination }) => {
   const handeleChangePage = (index) => {
@@ -20,7 +20,7 @@ const Pagination = ({ totalPages, setPagination, pagination }) => {
   );
 };
 Pagination.propTypes = {
-  totalPages: PropTypes.number.isRequired,
+  totalPages: PropTypes.number,
   setPagination: PropTypes.func.isRequired,
   pagination: PropTypes.number.isRequired,
 };
