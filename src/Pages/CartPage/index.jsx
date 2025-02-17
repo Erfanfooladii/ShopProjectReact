@@ -1,10 +1,15 @@
 import './style.css';
 import { useEffect } from 'react';
 import ListItem from './Components/ListItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { emptyCart } from '../../Features/cartData';
 
 const CartPage = () => {
-  const productCart = JSON.parse(localStorage.getItem('cart'));
+  const dispatch = useDispatch();
+  const productCart = useSelector((state) => state.data.cartData);
+
   const listIdCart = productCart.map((item) => item._id);
+  const numberCart = productCart.length;
   useEffect(() => {
     document.title = 'Cart';
   }, []);
@@ -14,8 +19,13 @@ const CartPage = () => {
         <div className="cart__details">
           <h1 className="cart__title">Cart list</h1>
           <h2 className="cart__total--price">Total price: 222$</h2>
-          <h2 className="cart__total--product">Total products: 23</h2>
-          <button className="cart__button-all-remove">Remove All</button>
+          <h2 className="cart__total--product">Total products: {numberCart}</h2>
+          <button
+            onClick={() => dispatch(emptyCart())}
+            className="cart__button-all-remove"
+          >
+            Remove All
+          </button>
         </div>
         <ul className="cart__list">
           {listIdCart.length > 0 ? (
