@@ -11,12 +11,16 @@ const ProductPage = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(undefined);
-
+  const handeleTitleName = (name) => {
+    document.title = name;
+  };
   const getApi = async () => {
     setIsLoading(true);
     try {
-      const data = await getProductId(id);
-      setData(data);
+      const dataApi = await getProductId(id);
+      setData(dataApi);
+      handeleTitleName(dataApi.name);
+      console.log(data);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -25,8 +29,8 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
-    document.title = `Product | ${data?.name}`;
     getApi();
+    console.log('data eff', data);
   }, []);
 
   const [image, setImage] = useState(false);
