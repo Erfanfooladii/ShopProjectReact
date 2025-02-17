@@ -1,33 +1,31 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.css';
-import { CartContext } from '../../../../../../Contexts/cartContext';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart } from '../../../../../../Features/cartData';
 
 const FormItem = ({ data }) => {
-  const { setCartValue, cartValue } = useContext(CartContext);
   const [isAdd, setIsAdd] = useState(false);
-  useEffect(() => {
-    console.log(data._id);
+  const cartRducser = useSelector((state) => state.data.cartData);
+  const dispatch = useDispatch();
 
-    const isProductCart = cartValue.some((item) => item._id === data._id);
+  useEffect(() => {
+    const isProductCart = cartRducser.some((item) => item._id === data._id);
     setIsAdd(isProductCart);
-    console.log('is product: ', isProductCart);
   }, []);
 
   const handleFormData = (e) => {
     e.preventDefault();
     if (isAdd) {
       setIsAdd(false);
-      const removeDataCart = cartValue.filter((item) => item._id !== data._id);
-      setCartValue(removeDataCart);
+      dispatch(removeFromCart(data));
       toast.error('Removed from cart');
     } else {
       toast.success('Added to cart');
       setIsAdd(true);
-      setCartValue([...cartValue, data]);
+      dispatch(addToCart(data));
     }
-    console.log('aremso', cartValue);
   };
 
   return (

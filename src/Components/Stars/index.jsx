@@ -8,7 +8,6 @@ const Stars = ({ value }) => {
   ));
   return <div className="stars">{stars}</div>;
 };
-
 Stars.propTypes = {
   value: PropTypes.number,
 };

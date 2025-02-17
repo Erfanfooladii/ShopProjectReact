@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import './style.css';
 import { SearchContext } from '../../../../Contexts/searchContext';
 import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../../../../Contexts/cartContext';
+import { useSelector } from 'react-redux';
 const HeaderContent = () => {
   const [textValue, setTextValue] = useState('');
   const { setSearchValue } = useContext(SearchContext);
@@ -11,21 +11,15 @@ const HeaderContent = () => {
     setSearchValue(textValue);
   };
   const navigate = useNavigate();
-  const { setCartValue, cartValue } = useContext(CartContext);
-  console.log('header data', cartValue);
-  useEffect(() => {
-    const cartLocalstorage = JSON.parse(localStorage.getItem('cart'));
-    setCartValue(cartLocalstorage);
-  }, []);
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartValue));
-  }, [cartValue]);
-  const numberCart = cartValue.length;
+  const productCart = useSelector((state) => state.data.cartData);
+  const numberCart = productCart.length;
   return (
     <div className="header__header-content">
       <div className="__global-container">
         <div className="header__shop-name">
-          <h1 className="header__shop-title">Electro</h1>
+          <h1 onClick={() => navigate('/')} className="header__shop-title">
+            Electro
+          </h1>
         </div>
         <form onSubmit={searchHandele} className="header__search-box">
           <select className="header__search-select">

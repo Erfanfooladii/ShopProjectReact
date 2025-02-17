@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Stars from '../../../../Components/Stars';
-import './ProductCard.css';
+import './style.css';
 import PropTypes from 'prop-types';
 
 const ProductCard = ({
