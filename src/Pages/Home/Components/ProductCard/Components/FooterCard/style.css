@@ -1,0 +1,10 @@
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.card__footer--button {
+  background-color: transparent;
+  border: none;
+}

@@ -1,0 +1,34 @@
+.card__button--container {
+  display: none;
+  position: absolute;
+  background-color: black;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+.card:hover .card__button--container {
+  display: flex;
+  bottom: -57px;
+  padding: 5px;
+}
+.card:hover .card__button--add {
+  display: block;
+}
+.card__button--add {
+  width: 190px;
+  display: none;
+  min-width: 164px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 400ms;
+}
+.card__button--add:hover {
+  transition: 400ms;
+  background-color: rgb(236, 73, 73);
+}

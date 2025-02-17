@@ -1,0 +1,13 @@
+.card__image--loaded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading__image {
+  width: 100%;
+  min-height: 190px;
+  max-height: 191px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
