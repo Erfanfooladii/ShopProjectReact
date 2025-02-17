@@ -1,4 +1,19 @@
-/* .product__item-image{} */
-.product__itme-img {
+.product__item-image {
+  min-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__item--loaded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading__image {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
