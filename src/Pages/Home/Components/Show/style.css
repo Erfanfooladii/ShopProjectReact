@@ -3,6 +3,7 @@
   gap: 5px;
 }
 .show__body {
+  padding: 5px;
   border: 1px solid #000;
   display: flex;
   align-items: center;

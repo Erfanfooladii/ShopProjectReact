@@ -4,7 +4,9 @@ import './style.css';
 const ItemSllin = ({ image, name, category, price }) => {
   return (
     <li className="itemSllin">
-      <img className="itemSllin__image" src={image} alt={name} />
+      <div className="itmeSllin__image-frame">
+        <img className="itemSllin__image" src={image} alt={name} />
+      </div>
       <div className="itemSllin__detail">
         <h2 className="itemSllin__detail__category">{category}</h2>
         <h3 className="itemSllin__detail__name">{name}</h3>

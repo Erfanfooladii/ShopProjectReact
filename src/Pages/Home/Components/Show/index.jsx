@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './ShowPage.css';
+import './style.css';
 const ShowPage = ({ setLimitShowPage }) => {
   return (
     <div className="show">

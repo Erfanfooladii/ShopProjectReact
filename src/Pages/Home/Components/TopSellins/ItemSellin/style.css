@@ -4,8 +4,11 @@
   gap: 5px;
   align-items: center;
 }
+.itmeSllin__image-frame {
+  width: 70px;
+}
 .itemSllin__image {
-  width: 30%;
+  width: 100%;
 }
 .itemSllin__detail {
   display: flex;
