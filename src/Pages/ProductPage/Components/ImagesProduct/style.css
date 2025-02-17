@@ -5,6 +5,14 @@
   position: relative;
   padding: 25px 0;
 }
+.product__itme-img {
+  width: 100%;
+}
+.product__images-frame {
+  width: 100%;
+  min-height: 140px;
+  max-height: 141px;
+}
 .product__images--top-button,
 .product__images--bottom-button {
   border: 1px solid #4b4b4c;

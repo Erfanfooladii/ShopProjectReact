@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import './style.css';
-
 const ImagesProduct = ({ data, imageHandler, image }) => {
   const imageSrc =
     data && data.images && data.images.length > 0
       ? data.images[image ? 1 : 0]
       : '';
-
   return (
     <div className="product__iamges">
       <button onClick={imageHandler} className="product__images--top-button">
@@ -27,9 +25,11 @@ const ImagesProduct = ({ data, imageHandler, image }) => {
         </svg>
       </button>
       <div className="product__images-item">
-        {imageSrc && (
-          <img src={imageSrc} className="product__itme-img" alt={data.name} />
-        )}
+        <div className="product__images-frame">
+          {imageSrc && (
+            <img src={imageSrc} className="product__itme-img" alt={data.name} />
+          )}
+        </div>
       </div>
       <button onClick={imageHandler} className="product__images--bottom-button">
         <svg
