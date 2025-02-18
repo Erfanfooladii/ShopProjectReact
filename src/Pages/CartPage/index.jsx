@@ -10,6 +10,12 @@ const CartPage = () => {
 
   const listIdCart = productCart.map((item) => item._id);
   const numberCart = productCart.length;
+  const totalPriceCart = Math.round(
+    productCart.reduce((accumulator, item) => {
+      return accumulator + item.price;
+    }, 0),
+  );
+
   useEffect(() => {
     document.title = 'Cart';
   }, []);
@@ -18,7 +24,7 @@ const CartPage = () => {
       <div className="cart__content">
         <div className="cart__details">
           <h1 className="cart__title">Cart list</h1>
-          <h2 className="cart__total--price">Total price: 222$</h2>
+          <h2 className="cart__total--price">Total price: {totalPriceCart}$</h2>
           <h2 className="cart__total--product">Total products: {numberCart}</h2>
           <button
             onClick={() => dispatch(emptyCart())}
