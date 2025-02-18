@@ -19,10 +19,21 @@
   display: flex;
   align-items: center;
 }
-
+.header__box-setting {
+  z-index: 2;
+}
+.header__logout-button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.header__logout-button:hover {
+  background-color: #ff0000;
+}
 .header__btns-profile {
   display: flex;
   gap: 4px;
+  position: relative;
 }
 
 .header__btns-profile .header__btn {

@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../../../../../../Features/cartData';
+import { useNavigate } from 'react-router-dom';
 
-const FormItem = ({ data }) => {
+const FormItem = ({ data, auth }) => {
   const [isAdd, setIsAdd] = useState(false);
   const cartRducser = useSelector((state) => state.data.cartData);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const isProductCart = cartRducser.some((item) => item._id === data._id);
@@ -17,14 +19,18 @@ const FormItem = ({ data }) => {
 
   const handleFormData = (e) => {
     e.preventDefault();
-    if (isAdd) {
-      setIsAdd(false);
-      dispatch(removeFromCart(data));
-      toast.error('Removed from cart');
+    if (auth) {
+      if (isAdd) {
+        setIsAdd(false);
+        dispatch(removeFromCart(data));
+        toast.error('Removed from cart');
+      } else {
+        toast.success('Added to cart');
+        setIsAdd(true);
+        dispatch(addToCart(data));
+      }
     } else {
-      toast.success('Added to cart');
-      setIsAdd(true);
-      dispatch(addToCart(data));
+      navigate('/login');
     }
   };
 
@@ -73,6 +79,7 @@ FormItem.propTypes = {
   data: PropTypes.shape({
     _id: PropTypes.string,
   }),
+  auth: PropTypes.bool,
 };
 
 export default FormItem;

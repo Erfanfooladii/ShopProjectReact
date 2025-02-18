@@ -3,7 +3,8 @@ import './style.css';
 import { SearchContext } from '../../../../Contexts/searchContext';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-const HeaderContent = () => {
+import PropTypes from 'prop-types';
+const HeaderContent = ({ auth }) => {
   const [textValue, setTextValue] = useState('');
   const { setSearchValue } = useContext(SearchContext);
   const searchHandele = (e) => {
@@ -12,7 +13,7 @@ const HeaderContent = () => {
   };
   const navigate = useNavigate();
   const productCart = useSelector((state) => state.data.cartData);
-  const numberCart = productCart.length;
+  const numberCart = auth ? productCart.length : 0;
   return (
     <div className="header__header-content">
       <div className="__global-container">
@@ -71,5 +72,8 @@ const HeaderContent = () => {
       </div>
     </div>
   );
+};
+HeaderContent.propTypes = {
+  auth: PropTypes.bool.isRequired,
 };
 export default HeaderContent;

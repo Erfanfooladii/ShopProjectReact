@@ -36,7 +36,6 @@ const ListItem = ({ id }) => {
   }
 
   const roundedPrice = Math.round(data.price);
-  console.log('list item', data?.ratingCount);
 
   return (
     <li className="cart__list--item">

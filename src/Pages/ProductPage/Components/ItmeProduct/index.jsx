@@ -8,7 +8,7 @@ import ReviewItem from './Components/ReviewsItem';
 import ShareItem from './Components/ShareItem';
 import './style.css';
 
-const ItemProduct = ({ data, image }) => {
+const ItemProduct = ({ auth, data, image }) => {
   return (
     <div className="product__item">
       <ImageItem image={image} data={data} />
@@ -17,7 +17,7 @@ const ItemProduct = ({ data, image }) => {
         <ReviewItem data={data} />
         <PriceItem data={data} />
         <p className="product__description">{data.description}</p>
-        <FormItem data={data} />
+        <FormItem auth={auth} data={data} />
         <ActionsItem />
         <CategoryItem data={data} />
         <ShareItem />
@@ -32,6 +32,7 @@ ItemProduct.propTypes = {
     description: PropTypes.string,
   }),
   image: PropTypes.bool,
+  auth: PropTypes.bool,
 };
 
 export default ItemProduct;

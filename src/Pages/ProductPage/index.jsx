@@ -5,8 +5,9 @@ import { getProductId } from '../../utils/fetchProducts';
 import ImagesProduct from './Components/ImagesProduct';
 import ItemProduct from './Components/ItmeProduct';
 import { LoadingProduct } from '../../Components/Loading';
+import PropTypes from 'prop-types';
 
-const ProductPage = () => {
+const ProductPage = ({ auth }) => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +31,6 @@ const ProductPage = () => {
 
   useEffect(() => {
     getApi();
-    console.log('data eff', data);
   }, []);
 
   const [image, setImage] = useState(false);
@@ -47,9 +47,11 @@ const ProductPage = () => {
   return (
     <div className="product __global-container">
       <ImagesProduct imageHandler={imageHandler} image={image} data={data} />
-      <ItemProduct image={image} data={data} />
+      <ItemProduct auth={auth} image={image} data={data} />
     </div>
   );
 };
-
+ProductPage.propTypes = {
+  auth: PropTypes.bool.isRequired,
+};
 export default ProductPage;
