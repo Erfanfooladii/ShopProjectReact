@@ -1,12 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
-//import { GetApiContext } from '../../Contexts/getApiContext';
 import Header from '../Header';
 import HomePage from '../../Pages/Home';
 import ProductPage from '../../Pages/ProductPage';
 import Footer from '../Footer';
 import Page404 from '../../Pages/404';
-//import { useContext, useEffect, useState } from 'react';
 import CartPage from '../../Pages/CartPage';
 import { ToastContainer } from 'react-toastify';
 import LoginPage from '../../Pages/AuthPages/LoginPage';
