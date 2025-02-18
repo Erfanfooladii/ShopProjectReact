@@ -21,7 +21,6 @@ const ProductPage = ({ auth }) => {
       const dataApi = await getProductId(id);
       setData(dataApi);
       handeleTitleName(dataApi.name);
-      console.log(data);
     } catch (error) {
       setError(error.message);
     } finally {

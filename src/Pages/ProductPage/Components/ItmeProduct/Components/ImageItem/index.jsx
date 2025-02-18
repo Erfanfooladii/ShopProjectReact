@@ -38,7 +38,7 @@ ImageItem.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
   }),
-  image: PropTypes.string,
+  image: PropTypes.bool,
 };
 
 export default ImageItem;
