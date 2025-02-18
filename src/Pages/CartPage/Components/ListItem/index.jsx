@@ -9,7 +9,6 @@ const ListItem = ({ id }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(undefined);
-  //const cartRducser = useSelector((state) => state.data.cartData);
   const dispatch = useDispatch();
 
   const getApi = async (id) => {
@@ -50,7 +49,7 @@ const ListItem = ({ id }) => {
         <h1 className="cart__list-name">{data.name || 'Product Name'}</h1>
         <h2 className="cart__list-category">Category: {data.category?.name}</h2>
         <span className="cart__list-price">Price: {roundedPrice}$</span>
-        <Stars ratingCount={data?.ratingCount} />
+        <Stars value={5} />
       </div>
       <button
         onClick={() => dispatch(removeFromCart(data))}
