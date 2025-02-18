@@ -9,6 +9,7 @@ import Page404 from '../../Pages/404';
 //import { useContext, useEffect, useState } from 'react';
 import CartPage from '../../Pages/CartPage';
 import { ToastContainer } from 'react-toastify';
+import LoginPage from '../../Pages/AuthPages/LoginPage';
 
 function MainLayouts() {
   //const [validIds, setValidIds] = useState([]);
@@ -33,6 +34,7 @@ function MainLayouts() {
         <Route path="/" element={<HomePage />} />
         <Route path="/:id" element={<ProductPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />

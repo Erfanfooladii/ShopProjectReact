@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,31 +7,37 @@
   list-style: none;
 }
 
+/* Container */
 .__global-container {
   width: calc(100% - 200px);
   margin: auto;
 }
 
+/* Inputs and Buttons */
 input,
 button {
   border: none;
   background-color: transparent;
   outline: none;
 }
+
 select:focus {
   outline: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Images */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -41,11 +48,13 @@ h6 {
   margin: 0;
 }
 
+/* Paragraphs */
 p {
   margin: 0;
   line-height: 1.6;
 }
 
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -58,11 +67,13 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
+/* Buttons */
 button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+/* Modals */
 .modal {
   position: fixed;
   top: 0;
@@ -80,6 +91,8 @@ button {
   padding: 20px;
   border-radius: 5px;
 }
+
+/* Grid */
 .grid-container {
   display: grid;
   gap: 16px;
@@ -89,4 +102,43 @@ button {
   padding: 20px;
   background-color: #f1f1f1;
   border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .__global-container {
+    width: calc(100% - 150px);
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .__global-container {
+    width: calc(100% - 100px);
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .__global-container {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
 }
