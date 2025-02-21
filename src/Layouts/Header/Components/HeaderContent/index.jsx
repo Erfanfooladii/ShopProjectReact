@@ -22,7 +22,7 @@ const HeaderContent = ({ auth }) => {
             Electro
           </h1>
         </div>
-        <form onSubmit={searchHandele} className="header__search-box">
+        <form onSubmit={searchHandele} className="header__search-form">
           <select className="header__search-select">
             <option value="All">All categories</option>
             <option value="Books">Books</option>
@@ -39,7 +39,7 @@ const HeaderContent = ({ auth }) => {
             Search
           </button>
         </form>
-        <div className="header__route-btn">
+        <div className="header__buttons-store">
           <button
             onClick={() => navigate('/cart')}
             className="header__btn header__btn--cart"

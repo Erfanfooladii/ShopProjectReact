@@ -15,7 +15,7 @@
   font-size: x-large;
 }
 
-.header__search-box {
+.header__search-form {
   display: flex;
   border-radius: 20px;
   border: 1px solid #c2c2c2;
@@ -53,7 +53,7 @@
   background-color: rgb(248, 104, 104);
 }
 
-.header__route-btn {
+.header__buttons-store {
   display: flex;
   gap: 5px;
 }
@@ -80,4 +80,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header__search-input {
+    min-width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .header__shop-name {
+    font-size: 18px;
+  }
+  .header__search-form {
+    display: none;
+  }
 }

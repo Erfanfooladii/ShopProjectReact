@@ -43,3 +43,22 @@
   color: #fff;
   border: none;
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .header__contact-item:nth-child(2) {
+    display: none;
+  }
+  .header__contact-item:nth-child(3) {
+    display: none;
+  }
+  .header__btn--money {
+    display: none !important;
+  }
+}
