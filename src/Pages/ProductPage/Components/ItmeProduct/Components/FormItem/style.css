@@ -56,3 +56,13 @@
   padding: 4px;
   font-size: 18px;
 }
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .product__buy {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__buy--button {
+    min-width: 250px;
+  }
+}

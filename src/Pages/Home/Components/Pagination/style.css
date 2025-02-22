@@ -11,6 +11,9 @@
   color: #000;
   border: none;
   font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pagination--button:hover {
   background-color: #b8b8b8;
@@ -21,4 +24,21 @@
 }
 .pagination--button.active:hover {
   background-color: #f54e4e;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 2px;
+  }
+  .pagination--button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }

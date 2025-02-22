@@ -1,5 +1,5 @@
 .product__iamges {
-  width: 100%;
+  width: 200px;
   height: 100%;
   border: 1px solid #4b4b4c;
   position: relative;
@@ -20,13 +20,44 @@
   position: absolute;
   left: 40%;
   background-color: #fff;
+  width: 60px;
+  height: 60px;
+}
+.product__images--top-button svg,
+.product__images--bottom-button svg {
+  width: 40px;
+  height: 40px;
 }
 .product__images--top-button {
   top: -40px;
 }
-.product__images--botton-button {
+.product__images--bottom-button {
   bottom: -40px;
 }
-.product__iamges {
-  width: 200px;
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+  .product__images-frame {
+    min-width: none;
+    min-height: 300px;
+    max-height: none;
+  }
+  .product__iamges {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .product__images--top-button {
+    top: 40%;
+    left: auto;
+    right: 0;
+    rotate: 90deg;
+  }
+  .product__images--bottom-button {
+    bottom: auto;
+    top: 40%;
+    left: 0;
+    rotate: 90deg;
+  }
 }

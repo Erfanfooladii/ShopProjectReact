@@ -29,4 +29,7 @@
 }
 
 @media (max-width: 480px) {
+  .home__section--right {
+    display: none;
+  }
 }

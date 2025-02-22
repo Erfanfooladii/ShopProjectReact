@@ -9,3 +9,10 @@
 .product__share-link svg {
   width: 100%;
 }
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .product__share {
+    justify-content: center;
+  }
+}

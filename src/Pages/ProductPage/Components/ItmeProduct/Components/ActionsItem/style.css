@@ -2,3 +2,9 @@
   display: flex;
   gap: 20px;
 }
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .product__actions {
+    justify-content: center;
+  }
+}

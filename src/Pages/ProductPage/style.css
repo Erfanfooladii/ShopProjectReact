@@ -1,15 +1,13 @@
 .product {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 .product__item-detail {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-.product__title {
-  font-weight: 600;
-  color: #35365e;
 }
 .product__price--discounted {
   font-size: 25px;
@@ -19,4 +17,16 @@
 .product__description {
   color: #4b4b4c;
   max-width: 100%;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .product {
+    flex-direction: column;
+  }
 }
