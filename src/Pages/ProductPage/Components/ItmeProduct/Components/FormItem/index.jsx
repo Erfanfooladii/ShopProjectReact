@@ -14,8 +14,8 @@ const FormItem = ({ data, auth }) => {
 
   useEffect(() => {
     const isProductCart = cartRducser.some((item) => item._id === data._id);
-    setIsAdd(isProductCart);
-  }, []);
+    setIsAdd(isProductCart && auth);
+  }, [auth]);
 
   const handleFormData = (e) => {
     e.preventDefault();
