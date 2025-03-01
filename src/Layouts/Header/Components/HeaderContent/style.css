@@ -11,8 +11,10 @@
 .header__shop-title {
   cursor: pointer;
 }
-.header__shop-name {
+.header__shop-name-menu {
   font-size: x-large;
+  display: flex;
+  align-items: center;
 }
 
 .header__search-form {
@@ -92,7 +94,7 @@
   }
 }
 @media (max-width: 480px) {
-  .header__shop-name {
+  .header__shop-name-menu {
     font-size: 18px;
   }
   .header__search-form {
