@@ -87,6 +87,9 @@
   .header__search-input {
     min-width: 100px;
   }
+  .header__search-form {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .header__shop-name {
