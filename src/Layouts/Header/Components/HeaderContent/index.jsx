@@ -4,6 +4,7 @@ import { SearchContext } from '../../../../Contexts/searchContext';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import MenuButton from './Buttons/Menu';
 const HeaderContent = ({ auth }) => {
   const [textValue, setTextValue] = useState('');
   const { setSearchValue } = useContext(SearchContext);
@@ -17,7 +18,8 @@ const HeaderContent = ({ auth }) => {
   return (
     <div className="header__header-content">
       <div className="__global-container">
-        <div className="header__shop-name">
+        <div className="header__shop-name-menu">
+          <MenuButton />
           <h1 onClick={() => navigate('/')} className="header__shop-title">
             Electro
           </h1>
