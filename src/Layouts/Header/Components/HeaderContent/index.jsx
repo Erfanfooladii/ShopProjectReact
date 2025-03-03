@@ -4,7 +4,7 @@ import { SearchContext } from '../../../../Contexts/searchContext';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import MenuButton from './Buttons/Menu';
+import MenuButton from './Components/Buttons/Menu';
 const HeaderContent = ({ auth }) => {
   const [textValue, setTextValue] = useState('');
   const { setSearchValue } = useContext(SearchContext);
