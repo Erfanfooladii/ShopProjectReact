@@ -7,13 +7,14 @@ import { GetApiContext } from '../../Contexts/getApiContext';
 import TopSelling from './Components/TopSellins';
 import Category from './Components/Category';
 import { SearchContext } from '../../Contexts/searchContext';
+import { CategoryContext } from '../../Contexts/categoryContext';
 
 const HomePage = () => {
   const { dataApi } = useContext(GetApiContext);
   const { searchValue } = useContext(SearchContext);
-  const [category, setCategory] = useState(new Set());
   const [limitShowPage, setLimitShowPage] = useState();
   const [pagination, setPagination] = useState(1);
+  const { category, setCategory } = useContext(CategoryContext);
   useEffect(() => {
     setPagination(1);
   }, [limitShowPage, category, searchValue]);

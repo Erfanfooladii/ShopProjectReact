@@ -9,11 +9,15 @@ import CartPage from '../../Pages/CartPage';
 import { ToastContainer } from 'react-toastify';
 import LoginPage from '../../Pages/AuthPages/LoginPage';
 import PrivateRoute from '../../Pages/AuthPages/PrivateRoute';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import RegisterPage from '../../Pages/AuthPages/RegisterPage';
+import Menu from '../Menu';
+import { CategoryContext } from '../../Contexts/categoryContext';
 
 function MainLayouts() {
   const [auth, setAuth] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+  const { setCategory } = useContext(CategoryContext);
   useEffect(() => {
     const statusToken = typeof localStorage.getItem('token') === 'string';
     setAuth(statusToken);
@@ -21,10 +25,15 @@ function MainLayouts() {
 
   return (
     <>
-      <Header setAuth={setAuth} auth={auth} />
+      <Header
+        funcHandeleMenu={() => setIsMenu(!isMenu)}
+        setAuth={setAuth}
+        auth={auth}
+      />
+      <Menu setCategory={setCategory} isMenu={isMenu} />
       <ToastContainer position="bottom-left" />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage isMenu={isMenu} />} />
         <Route path="/:id" element={<ProductPage auth={auth} />} />
         <Route path="/login" render element={<LoginPage setAuth={setAuth} />} />
         <Route path="/register" element={<RegisterPage setAuth={setAuth} />} />
