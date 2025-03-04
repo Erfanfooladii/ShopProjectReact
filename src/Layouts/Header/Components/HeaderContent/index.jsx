@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import MenuButton from './Components/Buttons/Menu';
-const HeaderContent = ({ auth }) => {
+const HeaderContent = ({ auth, funcHandeleMenu }) => {
   const [textValue, setTextValue] = useState('');
   const { setSearchValue } = useContext(SearchContext);
   const searchHandele = (e) => {
@@ -19,7 +19,7 @@ const HeaderContent = ({ auth }) => {
     <div className="header__header-content">
       <div className="__global-container">
         <div className="header__shop-name-menu">
-          <MenuButton />
+          <MenuButton funcHandeleMenu={funcHandeleMenu} />
           <h1 onClick={() => navigate('/')} className="header__shop-title">
             Electro
           </h1>
@@ -77,5 +77,6 @@ const HeaderContent = ({ auth }) => {
 };
 HeaderContent.propTypes = {
   auth: PropTypes.bool.isRequired,
+  funcHandeleMenu: PropTypes.func,
 };
 export default HeaderContent;
