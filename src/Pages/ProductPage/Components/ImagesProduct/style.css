@@ -36,12 +36,9 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-}
 @media (max-width: 480px) {
   .product__images-frame {
     min-width: none;
-    min-height: 300px;
     max-height: none;
   }
   .product__iamges {

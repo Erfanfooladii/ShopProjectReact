@@ -15,5 +15,6 @@
   }
   .product__item {
     flex-direction: column-reverse;
+    padding: 0 10px;
   }
 }

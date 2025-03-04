@@ -1,5 +1,5 @@
 .cart__list--item {
-  width: 100%;
+  max-width: 650px;
   border: 1px solid #000;
   padding: 5px;
   display: flex;
@@ -23,8 +23,24 @@
   color: #727272;
 }
 .cart__button-remove {
-  background-color: red;
+  background-color: #ff0000;
   padding: 10px;
   color: #fff;
   border-radius: 20px;
+}
+.cart__button-remove:hover {
+  background-color: #ec6464;
+}
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .cart__list--item {
+    flex-direction: column;
+  }
+  .cart__list-image {
+    width: 100%;
+    max-width: none;
+  }
+  .cart__list-details {
+    width: 100%;
+  }
 }
