@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './index.css';
 import Header from '../Header';
 import HomePage from '../../Pages/Home';
@@ -18,11 +18,15 @@ function MainLayouts() {
   const [auth, setAuth] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const { setCategory } = useContext(CategoryContext);
+  const { pathname } = useLocation();
+  const validRoutes = ['/', '/login', '/register', '/cart'];
   useEffect(() => {
     const statusToken = typeof localStorage.getItem('token') === 'string';
     setAuth(statusToken);
   }, [auth]);
-
+  const objectIdRegex = /^[0-9a-fA-F]{24}$/;
+  const isRouteValid =
+    validRoutes.includes(pathname) || objectIdRegex.test(pathname.slice(1));
   return (
     <>
       <Header
@@ -33,19 +37,27 @@ function MainLayouts() {
       <Menu setCategory={setCategory} isMenu={isMenu} />
       <ToastContainer position="bottom-left" />
       <Routes>
-        <Route path="/" element={<HomePage isMenu={isMenu} />} />
-        <Route path="/:id" element={<ProductPage auth={auth} />} />
-        <Route path="/login" render element={<LoginPage setAuth={setAuth} />} />
-        <Route path="/register" element={<RegisterPage setAuth={setAuth} />} />
-        <Route
-          path="/cart"
-          element={
-            <PrivateRoute>
-              <CartPage />
-            </PrivateRoute>
-          }
-        />
-        <Route path="*" element={<Page404 />} />
+        {!isRouteValid ? (
+          <Route path="*" element={<Page404 />} />
+        ) : (
+          <>
+            <Route path="/" element={<HomePage isMenu={isMenu} />} />
+            <Route path="/:id" element={<ProductPage auth={auth} />} />
+            <Route path="/login" element={<LoginPage setAuth={setAuth} />} />
+            <Route
+              path="/register"
+              element={<RegisterPage setAuth={setAuth} />}
+            />
+            <Route
+              path="/cart"
+              element={
+                <PrivateRoute>
+                  <CartPage />
+                </PrivateRoute>
+              }
+            />
+          </>
+        )}
       </Routes>
       <Footer />
     </>
@@ -53,17 +65,3 @@ function MainLayouts() {
 }
 
 export default MainLayouts;
-
-//const [validIds, setValidIds] = useState([]);
-//const { dataApi } = useContext(GetApiContext);
-//const { pathname } = useLocation();
-
-/* useEffect(() => {
-      if (dataApi.productsData) {
-        const listId = dataApi.productsData.map((item) => item._id);
-        setValidIds(listId);
-      }
-    }, [dataApi.productsData]); */
-
-//const isValidPath = validIds.includes(pathname.slice(1));
-//const status = !isValidPath;
