@@ -1,3 +1,4 @@
+import './style.css';
 const Page404 = () => {
   return (
     <div>
