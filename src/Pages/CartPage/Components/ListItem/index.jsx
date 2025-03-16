@@ -5,6 +5,7 @@ import { getProductId } from '../../../../utils/fetchProducts';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { removeFromCart } from '../../../../Features/cartData';
+import { toast } from 'react-toastify';
 const ListItem = ({ id }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,10 @@ const ListItem = ({ id }) => {
     }
   };
 
+  const remvoeHadneler = () => {
+    dispatch(removeFromCart(data));
+    toast.error('Remove item form cart!');
+  };
   useEffect(() => {
     setIsLoading(true);
     getApi(id);
@@ -51,10 +56,7 @@ const ListItem = ({ id }) => {
         <span className="cart__list-price">Price: {roundedPrice}$</span>
         <Stars value={5} />
       </div>
-      <button
-        onClick={() => dispatch(removeFromCart(data))}
-        className="cart__button-remove"
-      >
+      <button onClick={remvoeHadneler} className="cart__button-remove">
         Remove from cart
       </button>
     </li>
