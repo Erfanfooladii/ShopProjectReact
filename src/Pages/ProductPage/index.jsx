@@ -2,10 +2,10 @@ import './style.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductId } from '../../utils/fetchProducts';
-import ImagesProduct from './Components/ImagesProduct';
 import ItemProduct from './Components/ItmeProduct';
 import { LoadingProduct } from '../../Components/Loading';
 import PropTypes from 'prop-types';
+import SliderImage from './Components/SliderImage';
 
 const ProductPage = ({ auth }) => {
   const { id } = useParams();
@@ -32,9 +32,9 @@ const ProductPage = ({ auth }) => {
     getApi();
   }, []);
 
-  const [image, setImage] = useState(false);
-  const imageHandler = () => {
-    setImage(!image);
+  const [image, setImage] = useState([]);
+  const imageHandler = (value = 0) => {
+    setImage([value]);
   };
 
   if (isLoading) {
@@ -43,9 +43,12 @@ const ProductPage = ({ auth }) => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+  if (!data || !data.images || data.images.length === 0) {
+    return <div>No images in slider available</div>;
+  }
   return (
     <div className="product __global-container">
-      <ImagesProduct imageHandler={imageHandler} image={image} data={data} />
+      <SliderImage images={data?.images} imageHandler={imageHandler} />
       <ItemProduct auth={auth} image={image} data={data} />
     </div>
   );

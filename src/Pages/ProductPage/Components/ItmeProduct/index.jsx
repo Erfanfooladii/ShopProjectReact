@@ -31,7 +31,7 @@ ItemProduct.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
   }),
-  image: PropTypes.bool,
+  image: PropTypes.array,
   auth: PropTypes.bool,
 };
 

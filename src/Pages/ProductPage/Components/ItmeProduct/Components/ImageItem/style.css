@@ -26,6 +26,6 @@
 }
 @media (max-width: 480px) {
   .product__item-image {
-    display: none;
+    flex-direction: column-reverse;
   }
 }

@@ -14,7 +14,7 @@
     font-weight: 400;
   }
   .product__item {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0 10px;
   }
 }
