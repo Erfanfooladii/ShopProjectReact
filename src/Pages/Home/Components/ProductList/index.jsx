@@ -61,7 +61,7 @@ const ProdcutList = ({ category, limitShowPage, pagination }) => {
 };
 ProdcutList.propTypes = {
   category: PropTypes.object,
-  limitShowPage: PropTypes.number,
+  limitShowPage: PropTypes.string,
   pagination: PropTypes.number.isRequired,
 };
 
